@@ -18,9 +18,8 @@ const _Header = forwardRef<HTMLElement, Props>(
           justifyContent: "space-between",
           alignItems: "center",
           padding: "0 2rem",
-          backgroundColor: "rgba(55, 55, 55, 0.3)",
           opacity: 0.8,
-          backdropFilter: "blur(2rem)",
+          backdropFilter: "blur(2.5rem)",
         }}
         {...props}
         ref={ref}
