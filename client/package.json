@@ -6,8 +6,10 @@
     "preinstall": "npx only-allow pnpm",
     "dev": "next dev",
     "build": "next build",
+    "test": "vitest",
     "start": "next start",
     "lint": "next lint",
+    "format": "prettier --write **/*.{js,ts,jsx,tsx,md,json}",
     "prepare": "cd .. && husky install client/.husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -34,6 +36,7 @@
     "yarn": "pnpm only"
   },
   "devDependencies": {
+    "@next/env": "^13.4.13",
     "@storybook/addon-essentials": "7.2.1",
     "@storybook/addon-interactions": "7.2.1",
     "@storybook/addon-links": "7.2.1",
@@ -55,6 +58,7 @@
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.1",
     "storybook": "7.2.1",
-    "tsconfig-paths-webpack-plugin": "^4.1.0"
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "vitest": "^0.34.1"
   }
 }
