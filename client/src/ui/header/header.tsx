@@ -1,6 +1,8 @@
+"use client";
 import { ComponentPropsWithoutRef, ReactNode, forwardRef } from "react";
+import { headerStyle } from "./header.css";
 
-type Props = ComponentPropsWithoutRef<"header"> & {
+type Props = Omit<ComponentPropsWithoutRef<"header">, "className"> & {
   leftChildren?: ReactNode;
   rightChildren?: ReactNode;
 };
@@ -8,22 +10,7 @@ type Props = ComponentPropsWithoutRef<"header"> & {
 const _Header = forwardRef<HTMLElement, Props>(
   ({ leftChildren, rightChildren, ...props }, ref) => {
     return (
-      <header
-        style={{
-          position: "sticky",
-          top: 0,
-          height: "3.5rem",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "0 2rem",
-          opacity: 0.8,
-          backdropFilter: "blur(2.5rem)",
-        }}
-        {...props}
-        ref={ref}
-      >
+      <header className={headerStyle} {...props} ref={ref}>
         {/* left */}
         <div>{leftChildren}</div>
         {/* right */}
