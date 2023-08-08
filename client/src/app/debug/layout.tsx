@@ -1,4 +1,4 @@
-import { Header } from "@/ui";
+import { CommonHeader } from "../_component";
 export default function RootLayout({
   children,
 }: {
@@ -6,7 +6,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Header leftChildren={<strong>IML Okuda</strong>} />
+      <CommonHeader />
       {children}
     </>
   );
