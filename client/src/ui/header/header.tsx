@@ -14,7 +14,7 @@ const _Header = forwardRef<HTMLElement, Props>(
         {/* left */}
         <div>{leftChildren}</div>
         {/* right */}
-        <div>{rightChildren}</div>
+        <div style={{ paddingRight: "1rem" }}>{rightChildren}</div>
       </header>
     );
   }

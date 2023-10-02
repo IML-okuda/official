@@ -1,1 +1,1 @@
-export * from "./common.css";
+export * from "./layout.css";
