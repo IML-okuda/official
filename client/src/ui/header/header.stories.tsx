@@ -28,6 +28,6 @@ type Story = StoryObj<typeof Header>;
 export const Default: Story = {
   args: {},
   render() {
-    return <Header leftChildren={"Left"} rightChildren={"Right"} />;
+    return <Header top={"left"} />;
   },
 };

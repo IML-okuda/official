@@ -3,48 +3,18 @@ import { Header } from "@/ui";
 import {
   FileTextIcon,
   GitHubLogoIcon,
-  HamburgerMenuIcon,
   PersonIcon,
 } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, ReactNode } from "react";
 import * as styles from "./common-header.css";
-
-const HeaderLink: FC<{
-  href: string;
-  icon?: ReactNode;
-  text: string;
-}> = ({ href, icon, text }) => (
-  <Link
-    className={styles.linkStyle}
-    href={href}
-    style={{
-      display: "flex",
-      gap: "0.5rem",
-      alignItems: "center",
-      textDecoration: "none",
-      color: "inherit",
-    }}
-  >
-    {icon}
-    <span
-      style={{
-        fontSize: "0.75rem",
-        fontWeight: "bold",
-      }}
-    >
-      {text}
-    </span>
-  </Link>
-);
 
 export const CommonHeader = () => {
   return (
     <Header
-      leftChildren={
+      top={
         <Link
-          href={"/debug"}
+          href={"/"}
           style={{ height: "100%", textDecoration: "none", color: "inherit" }}
         >
           <div
@@ -53,7 +23,6 @@ export const CommonHeader = () => {
               alignItems: "center",
               gap: "1.0rem",
               flexDirection: "row",
-              paddingLeft: "1rem",
             }}
           >
             {/* Logo */}
@@ -95,45 +64,23 @@ export const CommonHeader = () => {
           </div>
         </Link>
       }
-      rightChildren={
-        <>
-          <div
-            className={styles.hiddenInMobileStyle}
-            style={{
-              alignItems: "center",
-              gap: "0.875rem",
-            }}
-          >
-            {/* Members Link */}
-            <HeaderLink
-              href="#"
-              icon={<PersonIcon width="1.5rem" height="1.5rem" />}
-              text="Members"
-            />
-
-            {/* Publications Link */}
-            <HeaderLink
-              href="#"
-              icon={<FileTextIcon width="1.5rem" height="1.5rem" />}
-              text="Publications"
-            />
-
-            {/* GitHub Repository Link */}
-            <HeaderLink
-              href="https://github.com/IML-okuda/official"
-              icon={<GitHubLogoIcon width="1.5rem" height="1.5rem" />}
-              text="GitHub"
-            />
-          </div>
-
-          <div className={styles.showInMobileStyle}>
-            <HamburgerMenuIcon width="1.5rem" height="1.5rem" />
-          </div>
-        </>
-      }
-      style={{
-        zIndex: 10,
-      }}
+      menu={[
+        {
+          href: "/",
+          icon: <PersonIcon width="1em" height="1em" />,
+          text: "Members",
+        },
+        {
+          href: "/",
+          icon: <FileTextIcon width="1em" height="1em" />,
+          text: "Publications",
+        },
+        {
+          href: "https://github.com/IML-okuda/official",
+          icon: <GitHubLogoIcon width="1em" height="1em" />,
+          text: "GitHub",
+        },
+      ]}
     />
   );
 };
