@@ -15,7 +15,7 @@ export const headerStyle = styleVariants({
   default: [
     baseStyle,
     {
-      position: "sticky",
+      position: "fixed",
       top: 0,
       display: "flex",
       flexDirection: "row",

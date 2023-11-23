@@ -88,7 +88,7 @@ const Page = () => {
     <main
       className={styles.layout}
       style={{
-        padding: "3rem 1rem",
+        padding: "5rem 1rem",
         gap: "2.5rem",
         display: "flex",
         flexDirection: "column",
