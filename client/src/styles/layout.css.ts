@@ -9,8 +9,8 @@ globalStyle("*", {
 globalStyle("html, body", {
   margin: 0,
   color: "#222",
-  background:
-    "linear-gradient(to bottom, transparent, rgb(255, 255, 255)) rgb(240, 240, 244)",
+  // background:
+  //   "linear-gradient(to bottom, transparent, rgb(255, 255, 255)) rgb(240, 240, 244)",
   backgroundAttachment: "fixed",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",

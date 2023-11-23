@@ -22,7 +22,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={noto.className}>
-        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        {/* 背景画像 */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundImage: "url(/background.jpg)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            filter: "blur(20px)",
+            zIndex: -1,
+          }}
+        />
+        <div
+          style={{
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        </div>
       </body>
     </html>
   );
