@@ -25,27 +25,28 @@ export default function RootLayout({
         {/* 背景画像 */}
         <div
           style={{
-            position: "absolute",
+            position: "fixed",
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%",
+            minHeight: "100vh",
             backgroundImage: "url(/background.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
-            filter: "blur(20px)",
+            backgroundRepeat: "no-repeat", // これを追加
+            filter: "blur(25px)",
             zIndex: -1,
           }}
         />
-        <div
+        {/* <div
           style={{
             position: "relative",
             zIndex: 1,
           }}
-        >
-          <StyledJsxRegistry>{children}</StyledJsxRegistry>
-        </div>
+        > */}
+        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        {/* </div> */}
       </body>
     </html>
   );
