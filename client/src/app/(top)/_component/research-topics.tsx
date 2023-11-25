@@ -5,7 +5,7 @@ import { FC } from "react";
 
 export type ResearchTopic = {
   title: string;
-  description: string;
+  description: JSX.Element;
   tags: string[];
   figs?: { src: string; caption: string }[];
 };
@@ -17,8 +17,6 @@ export const ResearchTopics: FC<{ researchTopics: ResearchTopic[] }> = ({
     <>
       <div
         style={{
-          // display: "grid",
-          // gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
           display: "flex",
           flexDirection: "column",
           gap: "1.5rem",
@@ -32,7 +30,7 @@ export const ResearchTopics: FC<{ researchTopics: ResearchTopic[] }> = ({
               gridTemplateRows: "subgrid",
               gridRow: "span 3",
               rowGap: "1.5rem",
-              backgroundColor: "rgba(255, 255, 255, 0.85)",
+              backgroundColor: "rgba(255, 255, 255, 0.9)",
               backdropFilter: "blur(20px)",
               border: `1px solid ${blackA.blackA3}`,
               borderRadius: "5px",
@@ -41,7 +39,9 @@ export const ResearchTopics: FC<{ researchTopics: ResearchTopic[] }> = ({
           >
             <h3>{topic.title}</h3>
             <div>
-              <p style={{ fontSize: "0.875rem" }}>{topic.description}</p>
+              <div style={{ fontSize: "0.875rem", lineHeight: "1.75rem" }}>
+                {topic.description}
+              </div>
               {/* 図 */}
               {topic.figs && topic.figs.length > 0 && (
                 <div
@@ -66,6 +66,7 @@ export const ResearchTopics: FC<{ researchTopics: ResearchTopic[] }> = ({
                       }}
                     >
                       <Image
+                        style={{ margin: "0 auto" }}
                         src={fig.src}
                         width={500}
                         height={500}

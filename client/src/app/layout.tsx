@@ -39,14 +39,7 @@ export default function RootLayout({
             zIndex: -1,
           }}
         />
-        {/* <div
-          style={{
-            position: "relative",
-            zIndex: 1,
-          }}
-        > */}
         <StyledJsxRegistry>{children}</StyledJsxRegistry>
-        {/* </div> */}
       </body>
     </html>
   );
