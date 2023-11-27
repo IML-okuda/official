@@ -148,10 +148,28 @@ const Page = () => {
         <News
           news={[
             {
-              date: "2023/3",
+              date: "2023/11",
               title:
-                "Effects on Selective Removal of Adversarial Examples for Noisy X-ray Images",
-              authors: ["Haruto Namura", "Tatsuki Itasaka", "Masahiro Okuda"],
+                "コマツ株式会社との共同研究に関するプレスリリースが配信されました．https://www.doshisha.ac.jp/news/detail/001-JdzIZe.html",
+              authors: [],
+            },
+            {
+              date: "2023/11",
+              title:
+                "岩田晃典君が信号処理シンポジウムの信号処理若手奨励賞を受賞し，授賞式に出席しました． https://www.doshisha.ac.jp/news/2023/0322/news-detail-9492.html",
+              authors: ["岩田晃典"],
+            },
+            {
+              date: "2023/10",
+              title:
+                "岩田晃典君が主著のCNNバイアスに関する論文がジャーナル APSIPA Trans. Sig. Info. Proc.に掲載されました． https://www.nowpublishers.com/article/Details/SIP-2023-0003",
+              authors: ["岩田晃典"],
+            },
+            {
+              date: "2023/7",
+              title:
+                "板坂樹生君のHSI復元に関する論文が、ジャーナルIEEE Accessに採択されました https://ieeexplore.ieee.org/document/10192384",
+              authors: ["板坂樹生"],
             },
           ]}
         />
