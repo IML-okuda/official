@@ -1,0 +1,162 @@
+---
+// import "@/styles/global.css";
+
+import Header from "@/components/Header/Header.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    {/* 背景画像 */}
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        minHeight: "100vh",
+        backgroundImage: "url(/background.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        filter: "blur(25px)",
+        zIndex: -1,
+      }}
+    >
+    </div>
+    <Header>aaa</Header>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  /* box-sizing: border-box;を設定" */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* フォントサイズの拡大を防ぐ */
+  html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+
+  /* デフォルトのマージンを削除、作成するCSSの制御を改善するため */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  figure,
+  blockquote,
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  /* リストのスタイルを削除、これはデフォルトのスタイルが削除されることを示唆します */
+  ul[role="list"],
+  ol[role="list"] {
+    list-style: none;
+  }
+
+  /* bodyのデフォルトを設定 */
+  body {
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  /* 見出しやインタラクティブ要素のline-heightを設定 */
+  h1,
+  h2,
+  h3,
+  h4,
+  button,
+  input,
+  label {
+    line-height: 1.1;
+  }
+
+  /* 見出しのテキスト折り返しをbalanceに設定 */
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  /* classを持たないa要素はデフォルトのスタイルを継承 */
+  a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+  }
+
+  /* 画像の扱いを簡単にする */
+  img,
+  picture {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* inputやbuttonなどのfontは継承 */
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  /* rows属性のないtextareasが小さくならないようにする */
+  textarea:not([rows]) {
+    min-height: 10em;
+  }
+
+  /* アンカーされている要素には余分なスクロールマージンが必要 */
+  :target {
+    scroll-margin-block: 5ex;
+  }
+
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html,
+  body {
+    margin: 0;
+    color: #222;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* @media screen and (max-width: 700px) {
+    main {
+      padding: "0 1rem";
+      opacity: 0.9;
+    }
+    ,
+    main {
+      width: "701px";
+      margin: "0 auto";
+      padding: "0 1rem";
+    }
+  } */
+</style>

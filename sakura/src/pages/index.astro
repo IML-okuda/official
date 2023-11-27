@@ -1,0 +1,139 @@
+---
+import type { ResearchTopic } from "@/components/ResearchTopics.astro";
+import ResearchTopics from "@/components/ResearchTopics.astro";
+import News, { type NewsItem } from "../components/News.astro";
+import Layout from "../layouts/Layout.astro";
+
+const news: NewsItem[] = [
+  {
+    date: "2023/11",
+    title: "コマツ株式会社との共同研究に関するプレスリリースが配信されました．",
+    link: "https://www.doshisha.ac.jp/news/detail/001-JdzIZe.html",
+    authors: [],
+  },
+  {
+    date: "2023/11",
+    title:
+      "岩田晃典君が信号処理シンポジウムの信号処理若手奨励賞を受賞し，授賞式に出席しました．",
+    link: "https://www.doshisha.ac.jp/news/2023/0322/news-detail-9492.html",
+    authors: ["岩田晃典"],
+  },
+  {
+    date: "2023/10",
+    title:
+      "岩田晃典君が主著のCNNバイアスに関する論文がジャーナル APSIPA Trans. Sig. Info. Proc.に掲載されました．",
+    link: " https://www.nowpublishers.com/article/Details/SIP-2023-0003",
+    authors: ["岩田晃典"],
+  },
+  {
+    date: "2023/07",
+    title:
+      "板坂樹生君のHSI復元に関する論文が、ジャーナルIEEE Accessに採択されました",
+    link: " https://ieeexplore.ieee.org/document/10192384",
+    authors: ["板坂樹生"],
+  },
+];
+const researchTopics: ResearchTopic[] = [
+  {
+    title: "AIの癖を読み解く",
+    description:
+      "ディープラーニングの構成要素であるニューラルネットワークは様々な“癖”を持っています．例えば畳み込みニューラルネットワークは物体の大域的形状よりも局所的特徴を捉える能力に優れています(*2)．また，入力画像に目に見えない少しの揺らぎを与えるだけで，AIの判断を狂わせる事ができます(*3)．我々は様々な手法でこのようなニューラルネットワークの癖を読み解き，システムの安定化，認識精度の向上を達成し，SNS/Webシステム解析や時系列データ予測などの分野に応用しています．",
+    tags: ["高精細画像 AI", "テクスチャバイアス", "Adversarial Attack"],
+    figs: [
+      {
+        src: "/fig/adversarial-attack.png",
+        caption: "数式画像にアタックをかけて数式OCRに誤認識させる",
+      },
+      {
+        src: "/fig/kaeru.png",
+        caption:
+          "画像分解を用いてニューラルネットワークの“癖”をコントロールすることができる",
+      },
+    ],
+  },
+  {
+    title: "ゼロショット画像復元",
+    description:
+      "機械学習を用いてノイズやボケなどで劣化した観測画像から元の綺麗な画像を復元するには，一般に劣化画像と劣化のない原画像のペアが大量に必要となります．しかし実際のシチュエーションにおいて，このような原画像を用意するのは現実的ではありません．この問題を解決するために， 我々は，教師画像のみならず，学習データを一切必要としないゼロショット学習法 を考案し，様々なデノイズ，ボケ除去，超解像などの復元タスクに応用する研究を行っています．学習データが一切なくても，学習データがある場合と同等の精度で復元が可能になります．",
+    tags: ["高精細画像 AI", "画像復元", "ゼロショット学習"],
+    figs: [
+      {
+        src: "/fig/zero-shot.png",
+        caption:
+          "画素を意図的に欠損させ，その画素を周りの画素で埋めるように学習をすると，1 枚の画像のみで欠損復元が可能となる．",
+      },
+    ],
+  },
+  {
+    title: "人流データ・経済データ解析",
+    description:
+      "AIによる時空間解析は，近年，多くの産業や研究分野でその有用性が証明されています．特に，「AIを用いた人流データ解析，経済データ解析，時空間データ解析」は，都市計画，交通，マーケティング，など，多くの応用分野で極めて重要です． 我々は，スパースコーディングと呼ばれる数理的手法や深層学習を用いて，人々の移動パターンや集まり方の分析，市場動態や消費者行動の予測，などの研究を行っています．これにより，より効率的な交通システムや公共施設の配置や，製品戦略の最適化が可能になります．",
+    tags: ["時空間", "グラフ"],
+  },
+  {
+    title: "医療画像解析",
+    description:
+      "MRIやCT画像などの高次元データは内部に豊富な情報が包含されているが，その情報を抽出するのはチャレンジングな問題です．医療画像から様々な特徴量を抽出して，画像診断に応用する技術はRadiomicsと呼ばれ，近年注目を集めています． 本研究室では，スパースコーディングや深層学習技術をRadoimicsに応用し，画像高精細化による診断精度の向上や脳腫瘍患者の術後生存期間予測に取り組んでいます．",
+    tags: ["高次元データの知識抽出", "医療画像"],
+    figs: [
+      {
+        src: "/fig/radiomics.png",
+        caption: "Radiomicsの概要",
+      },
+    ],
+  },
+  {
+    title: "主観のデータ化",
+    description:
+      "これまでの画像分類は，画像に，車，イヌ，などのラベルをつけて，画像とラベルの関係を学習することで，分類を可能にしていました．しかし，この方法ではその画像の持つ「雰囲気」やそのシーンがもつ「状況」などの，ラベルで表現することが難しい分類タスクに適用することはできません．我々はこのような曖昧で直接ラベル付けが困難な画分類を可能にする手法を研究しています．これにより従来にはない，新しい観点の画像検索や推薦が可能になります．",
+    tags: ["高次元データの知識抽出"],
+  },
+];
+---
+
+<Layout title="同志社大学 知的機構研究室（奥田研）">
+  <main
+    style={{
+      padding: "5rem 1rem",
+      gap: "2.5rem",
+      display: "flex",
+      flexDirection: "column",
+    }}
+  >
+    <section>
+      <h2
+        style={{
+          paddingBottom: "2rem",
+        }}
+      >
+        News
+      </h2>
+      <News news={news} />
+    </section>
+    <section
+      style={{
+        gap: "2.5rem",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <h2>研究内容 / Research</h2>
+      <ResearchTopics topics={researchTopics} />
+    </section>
+  </main>
+</Layout>
+<style>
+  @media screen and (max-width: 700px) {
+    main {
+      padding: "0 1rem";
+      opacity: 0.9;
+    }
+  }
+  @media screen and (min-width: 701px) {
+    main {
+      width: 701px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  }
+</style>

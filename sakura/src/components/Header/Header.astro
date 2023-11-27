@@ -1,0 +1,96 @@
+---
+import { blackA } from "@radix-ui/colors";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+---
+
+<header
+  style={{
+    zIndex: 100,
+    padding: "0.5rem 0",
+    width: "100%",
+    opacity: 0.985,
+    backdropFilter: "blur(1.5rem)",
+    overscrollBehaviorY: "contain",
+    position: "fixed",
+    top: 0,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  }}
+>
+  <div
+    style={{
+      width: "100%",
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+    }}
+  >
+    {/* Logo + Title*/}
+    <a href="/" style={{ textDecoration: "none" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "1.0rem",
+          flexDirection: "row",
+          paddingLeft: "1.0rem",
+        }}
+      >
+        {/* Logo */}
+        <div
+          style={{
+            justifyContent: "center",
+            display: "flex",
+          }}
+        >
+          <img src="/logo.svg" width={45} height={45} alt="logo" />
+        </div>
+        {/* Text */}
+        <div>
+          <span
+            style={{
+              fontSize: "1.0rem",
+              fontWeight: "bold",
+              color: "#050505",
+              gap: "0.75rem",
+            }}
+          >
+            <span>知的機構研究室</span>
+            <span>奥田正浩</span>
+          </span>
+        </div>
+      </div>
+    </a>
+    {/* Menu */}
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          gap: "1.0rem",
+          paddingRight: "1.0rem",
+        }}
+      >
+        <a
+          href="https://github.com/IML-okuda/official"
+          style={{
+            display: "flex",
+            gap: "1.0rem",
+            alignItems: "center",
+            textDecoration: "none",
+            fontSize: "1.0rem",
+            color: blackA.blackA10,
+            margin: "0.75rem 0.75rem",
+            fontWeight: "bold",
+          }}
+        >
+          <GitHubLogoIcon width="1.75em" height="1.75em" />
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
