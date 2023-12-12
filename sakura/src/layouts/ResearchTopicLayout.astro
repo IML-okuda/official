@@ -1,0 +1,35 @@
+---
+import Layout from "./Layout.astro";
+type Props = {
+  title: string;
+  //   description: string;
+};
+const { title }: Props = Astro.props;
+---
+
+<Layout title={title}>
+  <main
+    style={{
+      padding: "5rem 1rem",
+      gap: "2.5rem",
+      display: "flex",
+      flexDirection: "column",
+    }}
+  >
+    <!-- <div
+      style={{
+        display: "grid",
+        gridTemplateRows: "subgrid",
+        gridRow: "span 3",
+        rowGap: "1.5rem",
+        backgroundColor: "rgba(255, 255, 255, 0.9)",
+        backdropFilter: "blur(20px)",
+        border: `1px solid ${blackA.blackA3}`,
+        borderRadius: "5px",
+        padding: "1.5rem 1.0rem",
+      }}
+    >
+    </div> -->
+    <slot />
+  </main>
+</Layout>

@@ -1,6 +1,5 @@
 ---
-import type { ResearchTopic } from "@/components/ResearchTopics.astro";
-import ResearchTopics from "@/components/ResearchTopics.astro";
+import Card from "@/components/Card.astro";
 import News, { type NewsItem } from "../components/News.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -129,13 +128,29 @@ const researchTopics: ResearchTopic[] = [
     </section>
     <section
       style={{
-        gap: "2.5rem",
+        gap: "1.5rem",
         display: "flex",
         flexDirection: "column",
       }}
     >
       <h2>研究内容 / Research</h2>
-      <ResearchTopics topics={researchTopics} />
+      <Card
+        href={"/research/high-definition-image-ai"}
+        title={"高精細画像AI"}
+        body={"高精細テクスチャ識別とDX / AIの癖を読み解く / ゼロショット画像復元"}
+      />
+
+      <Card
+        href={"/research/knowledge-extraction"}
+        title={"高次元データの知識抽出"}
+        body={"医療画像解析 / 主観のデータ化"}
+      />
+
+      <Card
+        href={"/research/spatio-temporal-graph"}
+        title={"時空間/グラフ × データサイエンス"}
+        body={"人流データ・経済データ解析 / 色彩の定量化"}
+      />
     </section>
   </main>
 </Layout>

@@ -1,0 +1,32 @@
+---
+import { blackA } from "@radix-ui/colors";
+type Props = {
+  src: string;
+  caption: string;
+  width?: number;
+};
+const { src, caption, width = 300 }: Props = Astro.props;
+---
+
+<div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.5rem",
+    alignContent: "center",
+    justifyContent: "center",
+    margin: "0 auto",
+  }}
+>
+  <img style={{ margin: "0 auto" }} src={src} width={width} alt={caption} />
+  <p
+    style={{
+      fontSize: "0.875rem",
+      fontWeight: "bold",
+      color: blackA.blackA9,
+      textAlign: "center",
+    }}
+  >
+    {caption}
+  </p>
+</div>
