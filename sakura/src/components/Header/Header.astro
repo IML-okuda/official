@@ -1,6 +1,10 @@
 ---
 import { blackA } from "@radix-ui/colors";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import {
+  FileTextIcon,
+  GitHubLogoIcon,
+  PersonIcon,
+} from "@radix-ui/react-icons";
 ---
 
 <header
@@ -71,10 +75,41 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
           flexDirection: "row",
           justifyContent: "flex-end",
           alignItems: "center",
-          gap: "1.0rem",
           paddingRight: "1.0rem",
         }}
       >
+        <a
+          href="https://scholar.google.com/citations?user=YePYNYkAAAAJ&hl=en"
+          style={{
+            display: "flex",
+            gap: "1.0rem",
+            alignItems: "center",
+            textDecoration: "none",
+            fontSize: "1.0rem",
+            color: blackA.blackA10,
+            margin: "0.75rem 0.5rem",
+            fontWeight: "bold",
+            opacity: 0.9,
+          }}
+        >
+          <FileTextIcon width="1.75em" height="1.75em" />
+        </a>
+        <a
+          href="https://researchmap.jp/okdms"
+          style={{
+            display: "flex",
+            gap: "1.0rem",
+            alignItems: "center",
+            textDecoration: "none",
+            fontSize: "1.0rem",
+            color: blackA.blackA10,
+            margin: "0.75rem 0.5rem",
+            fontWeight: "bold",
+            opacity: 0.9,
+          }}
+        >
+          <PersonIcon width="1.75em" height="1.75em" />
+        </a>
         <a
           href="https://github.com/IML-okuda/official"
           style={{
@@ -84,8 +119,9 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
             textDecoration: "none",
             fontSize: "1.0rem",
             color: blackA.blackA10,
-            margin: "0.75rem 0.75rem",
+            margin: "0.75rem 0.5rem",
             fontWeight: "bold",
+            opacity: 0.9,
           }}
         >
           <GitHubLogoIcon width="1.75em" height="1.75em" />
