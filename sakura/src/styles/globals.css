@@ -55,6 +55,7 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+  word-break: auto-phrase; 
 }
 
 /* classを持たないa要素はデフォルトのスタイルを継承 */
