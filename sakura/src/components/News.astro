@@ -3,10 +3,12 @@ import { blackA } from "@radix-ui/colors";
 import { Link2Icon } from "@radix-ui/react-icons";
 export type NewsItem = {
   date: string;
-  title: string;
-  href?: string;
-  linkText?: string;
-  authors: string[];
+  items: {
+    title: string;
+    href?: string;
+    linkText?: string;
+    authors: string[];
+  }[];
 };
 interface Props {
   news: NewsItem[];
@@ -23,7 +25,7 @@ const { news } = Astro.props;
   }}
 >
   {
-    news.map((news, i) => (
+    news.map(({ date, items }) => (
       <div
         style={{
           display: "flex",
@@ -42,31 +44,44 @@ const { news } = Astro.props;
             gap: "1rem",
           }}
         >
-          <div>{news.date}</div>
-          <div>
-            {news.href && (
-              <a
-                href={news.href}
-                style={{
-                  textDecoration: "none",
-                }}
-              >
-                <strong>{news.title}</strong>
-                <Link2Icon
-                  style={{
-                    width: "fit-content",
-                    height: "fit-content",
-                    border: `1px solid ${blackA.blackA3}`,
-                    borderRadius: "1.5rem",
-                    display: "inline-block",
-                    verticalAlign: "middle",
-                    padding: "0.15rem 0.5rem",
-                    backgroundColor: "rgba(255, 255, 255, 0.3)",
-                    backdropFilter: "blur(10px)",
-                  }}
-                />
-              </a>
-            )}
+          <div>{date}</div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.75rem",
+            }}
+          >
+            {items.map((item) => {
+              const { title, href } = item;
+              return (
+                <div>
+                  {href && (
+                    <a
+                      href={href}
+                      style={{
+                        textDecoration: "none",
+                      }}
+                    >
+                      <strong>{title}</strong>
+                      <Link2Icon
+                        style={{
+                          width: "fit-content",
+                          height: "fit-content",
+                          border: `1px solid ${blackA.blackA3}`,
+                          borderRadius: "1.5rem",
+                          display: "inline-block",
+                          verticalAlign: "middle",
+                          padding: "0.15rem 0.5rem",
+                          backgroundColor: "rgba(255, 255, 255, 0.3)",
+                          backdropFilter: "blur(10px)",
+                        }}
+                      />
+                    </a>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
