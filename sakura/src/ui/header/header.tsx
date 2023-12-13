@@ -23,7 +23,7 @@ type Props = Omit<ComponentPropsWithoutRef<"header">, "className" | "style"> & {
 };
 
 export const Header: FC<Props> = ({ children, top, menu, ...props }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
   const [isOpen, setIsOpen] = useState(false);
 
   // prevent scrolling when mobile menu is open
