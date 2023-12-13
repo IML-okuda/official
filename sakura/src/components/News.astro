@@ -1,5 +1,6 @@
 ---
-import { blackA, blueDark } from "@radix-ui/colors";
+import { blackA } from "@radix-ui/colors";
+import { Link2Icon } from "@radix-ui/react-icons";
 export type NewsItem = {
   date: string;
   title: string;
@@ -17,8 +18,8 @@ const { news } = Astro.props;
   style={{
     display: "flex",
     flexDirection: "column",
-    gap: "1rem",
-    paddingLeft: "0.25rem",
+    gap: "1em",
+    padding: "0.25rem 0",
   }}
 >
   {
@@ -34,45 +35,39 @@ const { news } = Astro.props;
           color: blackA.blackA12,
         }}
       >
-        <div style={{}}>{news.date}</div>
         <div
           style={{
             display: "flex",
-            flexDirection: "column",
-            gap: "0.25rem",
+            flexDirection: "row",
+            gap: "1rem",
           }}
         >
+          <div>{news.date}</div>
           <div>
-            <p>
-              {news.title}
-              {news.href && (
-                <a
-                  href={news.href}
-                  style={{
-                    color: blueDark.blue9,
-                    textDecoration: "underline",
-                  }}
-                >
-                  [{news.linkText || "URL"}]
-                </a>
-              )}
-            </p>
-          </div>
-          {false && (
-            <div>
-              <div
+            {news.href && (
+              <a
+                href={news.href}
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "0.5rem",
+                  textDecoration: "none",
                 }}
               >
-                {news.authors.map((author, i) => (
-                  <div>{author}</div>
-                ))}
-              </div>
-            </div>
-          )}
+                <strong>{news.title}</strong>
+                <Link2Icon
+                  style={{
+                    width: "fit-content",
+                    height: "fit-content",
+                    border: `1px solid ${blackA.blackA3}`,
+                    borderRadius: "1.5rem",
+                    display: "inline-block",
+                    verticalAlign: "middle",
+                    padding: "0.15rem 0.5rem",
+                    backgroundColor: "rgba(255, 255, 255, 0.3)",
+                    backdropFilter: "blur(10px)",
+                  }}
+                />
+              </a>
+            )}
+          </div>
         </div>
       </div>
     ))
