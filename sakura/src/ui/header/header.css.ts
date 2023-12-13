@@ -7,7 +7,8 @@ const baseStyle = style({
   padding: "0.5rem 0",
   width: "100%",
   opacity: 0.985,
-  backdropFilter: "blur(1.5rem)",
+  backdropFilter: "blur(0.25rem)",
+  backgroundColor: "rgba(255, 255, 255, 0.85)",
   overscrollBehaviorY: "contain",
 });
 
