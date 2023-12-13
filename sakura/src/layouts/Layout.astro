@@ -1,5 +1,5 @@
 ---
-import Header from "@/components/Header/Header.astro";
+import { CommonHeader } from "@/ui/common-header";
 import "@fontsource/noto-sans-jp";
 import "../styles/globals.css";
 
@@ -39,7 +39,8 @@ const { title } = Astro.props;
       }}
     >
     </div>
-    <Header />
+    <!-- <Header /> -->
+    <CommonHeader client:only="react" />
     <div
       style={{
         backgroundColor: "rgba(255, 255, 255, 0.8)",
