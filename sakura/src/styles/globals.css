@@ -104,7 +104,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-p {
+div, p {
   line-height: 1.8;
 }
 
