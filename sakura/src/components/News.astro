@@ -1,6 +1,6 @@
 ---
 import { blackA } from "@radix-ui/colors";
-import { Link2Icon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon } from "@radix-ui/react-icons";
 export type NewsItem = {
   date: string;
   items: {
@@ -29,9 +29,6 @@ const { news } = Astro.props;
       <div
         style={{
           display: "flex",
-          flexDirection: "row",
-          gap: "1em",
-          rowGap: "1em",
           fontSize: "0.875rem",
           fontWeight: 500,
           color: blackA.blackA12,
@@ -63,10 +60,11 @@ const { news } = Astro.props;
                       href={href}
                       style={{
                         textDecoration: "none",
+                        // textDecorationColor: blackA.blackA3,
                       }}
                     >
                       {title}
-                      <Link2Icon
+                      <ExternalLinkIcon
                         style={{
                           width: "2rem",
                           height: "1.25rem",
