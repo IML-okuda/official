@@ -73,7 +73,7 @@ export const CommonHeader = () => {
           text: "Publications",
         },
         {
-          href: "https://github.com/IML-okuda/official",
+          href: "https://github.com/IML-okuda",
           icon: <GitHubLogoIcon width="1em" height="1em" />,
           text: "GitHub",
         },
