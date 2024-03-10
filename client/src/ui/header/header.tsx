@@ -1,12 +1,11 @@
-"use client";
 import { Cross1Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import * as Portal from "@radix-ui/react-portal";
 import {
-  ComponentPropsWithoutRef,
-  FC,
-  ReactNode,
   useEffect,
   useState,
+  type ComponentPropsWithoutRef,
+  type FC,
+  type ReactNode,
 } from "react";
 import { HeaderLink } from "./header-link";
 import * as styles from "./header.css";
@@ -23,8 +22,8 @@ type Props = Omit<ComponentPropsWithoutRef<"header">, "className" | "style"> & {
   fullscreen?: boolean;
 };
 
-const _Header: FC<Props> = ({ children, top, menu, ...props }) => {
-  const [isMobile, setIsMobile] = useState(false);
+export const Header: FC<Props> = ({ children, top, menu, ...props }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
   const [isOpen, setIsOpen] = useState(false);
 
   // prevent scrolling when mobile menu is open
@@ -137,4 +136,3 @@ const _Header: FC<Props> = ({ children, top, menu, ...props }) => {
   );
 };
 
-export const Header = _Header;

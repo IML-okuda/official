@@ -1,6 +1,5 @@
 import { blackA } from "@radix-ui/colors";
-import Link from "next/link";
-import { FC, ReactNode } from "react";
+import type { FC, ReactNode } from "react";
 import * as styles from "./header.css";
 
 export const HeaderLink: FC<{
@@ -8,10 +7,8 @@ export const HeaderLink: FC<{
   href: string;
   icon?: ReactNode;
   text: string;
-  key: string;
-}> = ({ href, icon, text, key, large }) => (
-  <Link
-    key={key}
+}> = ({ href, icon, text, large }) => (
+  <a
     className={styles.linkStyle}
     href={href}
     style={{
@@ -27,5 +24,5 @@ export const HeaderLink: FC<{
   >
     {large && icon}
     <span style={{}}>{text}</span>
-  </Link>
+  </a>
 );
