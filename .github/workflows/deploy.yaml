@@ -1,0 +1,42 @@
+name: Deploy
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sakura
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js 20
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('sakura/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies
+        run: pnpm install
+
+    #   - name: 📂 Sync files
+    #     uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    #     with:
+    #       server: ${{ secrets.FTP_SERVER }}
+    #       username: ${{ secrets.FTP_ACCOUNT }}
+    #       password: ${{ secrets.FTP_PASSWORD }}
+    #       server-dir: ${{ secrets.FTP_SERVER_DIR }}
+    #       local-dir: ./sakura/dist
