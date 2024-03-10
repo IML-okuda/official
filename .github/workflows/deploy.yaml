@@ -42,4 +42,4 @@ jobs:
           username: ${{ secrets.FTP_ACCOUNT }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          local-dir: ./sakura/dist
+          local-dir: ./sakura/dist/
