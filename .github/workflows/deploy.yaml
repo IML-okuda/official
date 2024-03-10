@@ -32,11 +32,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-    #   - name: 📂 Sync files
-    #     uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-    #     with:
-    #       server: ${{ secrets.FTP_SERVER }}
-    #       username: ${{ secrets.FTP_ACCOUNT }}
-    #       password: ${{ secrets.FTP_PASSWORD }}
-    #       server-dir: ${{ secrets.FTP_SERVER_DIR }}
-    #       local-dir: ./sakura/dist
+      - name: Build
+        run: pnpm build
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_ACCOUNT }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          local-dir: ./sakura/dist
