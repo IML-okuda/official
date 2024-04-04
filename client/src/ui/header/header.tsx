@@ -86,7 +86,9 @@ export const Header: FC<Props> = ({ children, top, menu, ...props }) => {
                   flexDirection: isMobile ? "column" : "row",
                 }}
               >
-                {menu?.map((m) => <HeaderLink large key={m.href} {...m} />)}
+                {menu?.map((m) => (
+                  <HeaderLink large key={m.href} {...m} />
+                ))}
               </div>
             </>
           )}
@@ -98,7 +100,9 @@ export const Header: FC<Props> = ({ children, top, menu, ...props }) => {
                 flexDirection: isMobile ? "column" : "row",
               }}
             >
-              {menu?.map((m) => <HeaderLink key={m.href} {...m} />)}
+              {menu?.map((m) => (
+                <HeaderLink key={m.href} {...m} />
+              ))}
             </div>
           )}
         </div>
@@ -135,4 +139,3 @@ export const Header: FC<Props> = ({ children, top, menu, ...props }) => {
     </header>
   );
 };
-
