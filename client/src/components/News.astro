@@ -55,7 +55,7 @@ const { news } = Astro.props;
               const { title, href } = item;
               return (
                 <div>
-                  {href && (
+                  {href ? (
                     <a
                       href={href}
                       style={{
@@ -78,6 +78,8 @@ const { news } = Astro.props;
                         }}
                       />
                     </a>
+                  ) : (
+                    <span>{title}</span>
                   )}
                 </div>
               );
