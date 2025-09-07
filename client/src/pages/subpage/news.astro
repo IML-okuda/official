@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NewsList from "../../components/News.astro";
+import newsData from '../../data/news.json';
+---
+
+<Layout title="ニュース一覧 | 同志社大学 知的機構研究室（奥田研）">
+    <main class="main-content">
+        <h1 class="page-title">News</h1>
+        <p class="page-description">全てのニュース</p>
+        <NewsList news={newsData} />
+    </main>
+</Layout>
+
+<style>
+    .main-content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 5rem 1rem;
+    }
+    .page-title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .page-description {
+        font-size: 1.1rem;
+        color: #666;
+        margin-bottom: 3rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1.5rem;
+    }
+</style>
