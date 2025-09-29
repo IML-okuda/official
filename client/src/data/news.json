@@ -1,5 +1,29 @@
 [
     {
+        "date": "2025/07",
+        "items": [
+            {
+                "title": "吉田君と中山君が研究成果を国際会議ITC-CSCCで発表しました．",
+                "authors": []
+            }
+        ]
+    },
+    {
+        "date": "2025/05",
+        "items": [
+            {
+                "title": "産学連携で取得した特許が知財番付2024にて入賞しました．",
+                "href": "https://rd.doshisha.ac.jp/rd/news/detail/018-8ZZ758.html",
+                "authors" : []
+            },
+            {
+                "title": "壁紙AI識別アプリが「グッドデザイン探訪」に掲載されました．",
+                "href": "https://journal.g-mark.org/posts/ad_004",
+                "authors" : []
+            }
+        ]
+    },
+    {
     "date": "2025/03",
     "items": [
         {
