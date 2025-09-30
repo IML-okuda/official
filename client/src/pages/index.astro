@@ -4,6 +4,8 @@ import News, { type NewsItem } from "../components/News.astro";
 import Layout from "../layouts/Layout.astro";
 
 import newsData from "../data/news.json"
+import pinnedData from "../data/news_pinned.json"
+
 import { ColumnSpacingIcon } from "@radix-ui/react-icons";
 // TODO: デザイン見直し
 const news: NewsItem[] = [
@@ -190,6 +192,16 @@ const news: NewsItem[] = [
       >
         News
       </h2>
+
+      {pinnedData.length > 0 && (
+        <>
+          <h3 class="sub-title pinned">注目News</h3>
+          <News news={pinnedData} />
+        </>
+      )}
+
+      <h3 class="sub-title normal">最新News</h3>
+
       <News news={newsData.slice(0,8)} />
 
       <div class="link-container">
@@ -255,4 +267,32 @@ const news: NewsItem[] = [
   .more-link:hover {
     background-color: #e0e0e0;
   }
+
+  .sub-title {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 1.25rem 0 .75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.25;
+  position: relative;
+  padding-left: .75rem;
+  }
+
+  /* サブセクションの左側のバー */
+  .sub-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .15em;
+  bottom: .15em;
+  width: .25rem;
+  border-radius: 2px;
+  background: var(--accent-color, #6b93ff);
+  }
+
+  .sub-title.pinned { --accent-color: #ff9500; }
+  .sub-title.normal { --accent-color: #a061ff; }
 </style>

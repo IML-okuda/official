@@ -1,13 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import NewsList from "../../components/News.astro";
+import NewsList from '../../components/News.astro';
 import newsData from '../../data/news.json';
+import pinnedData from '../../data/news_pinned.json';
 ---
 
 <Layout title="ニュース一覧 | 同志社大学 知的機構研究室（奥田研）">
     <main class="main-content">
         <h1 class="page-title">News</h1>
         <p class="page-description">全てのニュース</p>
+        {pinnedData.length > 0 && (
+            <>
+                <h3 class="sub-title pinned">注目News</h3>
+                <NewsList news={pinnedData} />
+            </>
+        )}
+        <h3 class="sub-title normal">最新News</h3>
         <NewsList news={newsData} />
     </main>
 </Layout>
@@ -25,8 +33,35 @@ import newsData from '../../data/news.json';
     .page-description {
         font-size: 1.1rem;
         color: #666;
-        margin-bottom: 3rem;
+        margin-bottom: 1.5rem;
         border-bottom: 1px solid #eee;
         padding-bottom: 1.5rem;
     }
+        .sub-title {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin: 1.25rem 0 .75rem;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #222;
+        line-height: 1.25;
+        position: relative;
+        padding-left: .75rem;
+    }
+
+  /* サブセクションの左側のバー */
+    .sub-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: .15em;
+        bottom: .15em;
+        width: .25rem;
+        border-radius: 2px;
+        background: var(--accent-color, #6b93ff);
+    }
+
+    .sub-title.pinned { --accent-color: #ff7a59; }
+    .sub-title.normal { --accent-color: #6b93ff; }
 </style>
