@@ -1,0 +1,110 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+
+<ResearchTopicLayout title={"センサー×データサイエンス"}>
+    <h1 class="title">センサー×データサイエンス</h1>
+    <div class="research-body">
+        <p>
+            本研究は，自作の誘電率センサやハイパースペクトルセンサなどの計測技術とAIを統合し，物性・状態の高精度推定と時空間可視化を実現します．
+            センサ設計，特徴抽出，モデル化により，水分量や成分比，劣化・異常の微小変化を非破壊で検出し，農業・建材・環境計測への展開を図ります．
+        </p>
+        <h3 class="sub-title">研究事例</h3>
+        <ul>
+            <li>誘電率センサと機械学習を用いた土壌水分量の高精度推定</li>
+            <li>ハイパースペクトルイメージングと深層学習を用いた農作物の成分分析</li>
+            <li>センサネットワークと時系列解析を用いた環境モニタリングと異常検知</li>
+        </ul>
+    </div>
+    <Fig src={"/fig/sensor-data-science-1.png"} caption={"誘導センサー"} />
+    <figure class="img-figure">
+        <div class="img-card">
+            <img src="/fig/sensor-data-science-2.png" />
+        </div>
+        <figcaption class="img-cap">ハイパースペクトルカメラによるスペクトル解析</figcaption>
+    </figure>
+</ResearchTopicLayout>
+
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .research-body ul {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-left: 1.2rem;
+        margin: 0;
+    }
+
+    .research-body li {
+        margin-bottom: 0.45rem;
+        line-height: 1.6;
+    }
+
+    .img-card {
+        display: block;
+        background-color: #ffffff;
+        padding: 10px;
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 10px;
+        line-height: 0;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .fig-card img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+    .img-cap {
+        margin-top: 8px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        color: var(--cap-color);
+        text-align: center;
+        line-height: 1.6;
+    }
+</style>

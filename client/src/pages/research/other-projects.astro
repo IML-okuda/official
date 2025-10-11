@@ -1,0 +1,77 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+
+<ResearchTopicLayout title={"その他の卒論・修論テーマ"}>
+    <h1 class="title">その他の卒論・修論テーマ</h1>
+    <div class="research-body">
+        <h2 class="sub-title">その他の卒論・修論テーマ抜粋</h2>
+        <ul>
+            <li>分光スペクトル情報を用いた素材の分類</li>
+            <li>ハイパースペクトルセンサを用いた異常検知</li>
+            <li>素材の相違を少量データで識別可能にするテクスチャメタ学習</li>
+            <li>企業のロゴと話題性の関連をデータから明らかにする</li>
+            <li>業務支援アプリのための床材分類の堅牢性向上</li>
+            <li>生存分析における顧客離脱予測と欠損値補間手法の評価</li>
+            <li>雰囲気に基づく画像分類におけるラベル付け手法の比較検討</li>
+            <li>業務用アプリ開発のための素材識別</li>
+            <li>量子コンピュータを用いた画像復元</li>
+            <li>ラベル有り・無しデータの分布マッチングと半教師あり対照学習の統合</li>
+        </ul>
+    </div>
+</ResearchTopicLayout>
+<style>
+        .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .research-body ul {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-left: 1.2rem;
+        margin: 0;
+    }
+
+    .research-body li {
+        margin-bottom: 0.45rem;
+        line-height: 1.6;
+    }
+</style>

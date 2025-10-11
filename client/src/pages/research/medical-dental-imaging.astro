@@ -1,0 +1,69 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+
+<ResearchTopicLayout title={"医歯画像解析"}>
+    <h1 class="title">医歯画像解析</h1>
+    <div class="research-body">
+        <p>
+            MRIやCT画像などの高次元データは内部に豊富な情報が包含されていますが，その情報を抽出するのはチャレンジングな問題です．
+            医療画像から様々な特徴量を抽出して，画像診断に応用する技術はRadiomicsと呼ばれ，近年注目を集めています．
+            本研究室では，スパースコーディングや深層学習技術をRadiomicsに応用し，画像高精細化による診断精度の向上や脳腫瘍患者の術後生存期間予測に取り組んでいます．
+        </p>
+    </div>
+    <Fig src={"/fig/radiomics.png"} caption={""} width={500} />
+    <div class="research-body">
+        <p>
+            また，歯科パノラマX線に写る頸動脈の石灰化をAIで自動検出し，脳卒中などの重症化予防と医科受診の早期化に役立てる研究です．
+            歯科で撮影済み画像の二次活用により，日常診療での早期スクリーニングへの実装を目指します．
+            学習データが少なくても高精度を達成できることが特徴です．（関西大学・画像処理工学研究室と松本歯科大学との共同研究）
+        </p>
+    </div>
+    <Fig src={"/fig/medical-dental-imaging-1.png"} caption={"出典PDFより抜粋"} />
+    <p class="fig-src"><a href="https://shingi.jst.go.jp/pdf/2023/2023_10kansai_001.pdf" target="_blank" rel="noopener">出典PDF:深層学習を用いた歯科パノラマX線写真からの動脈硬化検出</a></p>
+</ResearchTopicLayout>
+
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+        .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .fig-src {
+        margin-top: .25rem;
+        font-size: .85rem;
+        text-align: center;
+        opacity: .8;
+    }
+</style>

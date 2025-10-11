@@ -1,0 +1,62 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+import "@fontsource/noto-sans-jp/700.css";
+---
+
+<ResearchTopicLayout title={"AIの癖を読み解く"}>
+    <h1 class="title">AIの癖を読み解く</h1>
+    <div class="research-body">
+        <p>
+            AIはどこを重視して物体を認識するのか．<strong>概形？局所的模様？色？</strong>それを明らかにすることでニューラルネットワークの癖を見抜く方法とその評価について研究をしています．
+            また，入力画像に目に見えない少しの揺らぎを与えるだけで，AIの判断を狂わせる事ができます．我々は様々な手法でこのような<span class="accent">ニューラルネットワークの癖を読み解き，システムの安定化，認識精度の向上を達成</span>し，SNS/Webシステム解析や時系列データ予測などの分野に応用しています．
+        </p>
+    </div>
+    <Fig src={"/fig/kaeru.png"} caption={"画像分解を用いてニューラルネットワークの“癖”をコントロールすることができる"} width={500} />
+    <Fig src={"/fig/adversarial-attack.png"} caption={"数式画像にアタックをかけて数式OCRに誤認識させる"} width={500} />
+</ResearchTopicLayout>
+
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    .accent {
+        color: #ff5353
+    }
+</style>

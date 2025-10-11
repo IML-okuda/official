@@ -1,0 +1,146 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+<ResearchTopicLayout title={"高精細テクスチャ識別とDX"}>
+    <h1 class="title">高精細テクスチャ識別とDX</h1>
+
+    <div class="media">
+        <div class="media-body">
+            <div class="research-body">
+                <p>
+                    プロでも判断に迷う，酷似した材料の模様．さらに，太陽光や室内灯など，光の当たり方によってモノの見え方は大きく変わります．この「照明環境の変化」は，AIによる画像認識の精度を著しく低下させる大きな壁でした．
+                    私たちはこの課題に対し，独自のアプローチで挑んでいます．多様な撮影環境に左右されない，ロバストな高精度テクスチャ識別システムの開発に成功しました．この技術は，<a href="https://komatsu-coltd.co.jp/">大手企業</a>との共同研究を通じて壁紙識別アプリとしてリリースされ，すでに社会でその価値を証明しています．
+                </p>
+            </div>
+        </div>
+        <figure>
+            <Fig src={"/fig/kabepita-app.png"} caption={"壁紙識別アプリ「かべぴた」の画面イメージ"} width={300} />
+        </figure>
+    </div>
+    <div class="research-body">
+        <h2 class="sub-title">様々なメディアで紹介されました！</h2>
+        <ul>
+            <li><a href="https://mainichi.jp/articles/20240528/ddl/k27/040/276000c">毎日新聞「さらば、おも～いサンプル持参の日々　部屋壁紙　AIが識別　スマホで撮るだけ、東大阪企業と同志社大開発　／大阪」</a></li>
+            <li><a href="https://www.nikkei.com/article/DGXZQOUF1889Y0Y3A211C2000000/">日本経済新聞「同志社大学と内装材のコマツ、壁紙を見分けるAIアプリ」</a></li>
+            <li><a href="https://www.sankei.com/article/20240307-C47ITJGNXFKRLEU5UQ7THDQE6E/">産経新聞「欲しい壁紙、スマホで「ぴたり」と識別 同志社大が産学連携で識別アプリ開発」</a></li>
+            <li><a href="https://journal.g-mark.org/posts/ad_004">グッドデザイン探訪：「アプリが建築業界の働き方を変える」</a></li>
+            <li><a href="https://univ-journal.jp/249713/">大学ジャーナルオンライン「同志社大学とコマツが開発した壁紙AI識別アプリ　「KANSAI DX AWARD 2024」でグランプリを受賞」</a></li>
+            <li><a href="https://news.mynavi.jp/article/20240204-2875998/">マイナビニュース「【めちゃ便利やんけ】コマツ×同志社大が開発した壁紙AI識別アプリ「かべぴた」が話題 - 「本当に画期的なやつ」「家づくり中なので活用してみたい」」</a></li>
+        </ul>
+        <p>など多数！</p>
+    </div>
+    <figure>
+            <Fig src={"/fig/texture-recognition-dx-1.png"} caption={"Kansai DX Award グランプリ　授賞式の様子"} width={500} />
+    </figure>
+</ResearchTopicLayout>
+
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .media img {
+        width: 280px;
+        max-width: 40vw;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+        flex-shrink: 0;
+    }
+
+    .media-body {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:focus-visible {
+        outline: 2px solid: #7c3aed;
+        outline-offset: 2px;
+        border-radius: 2px;
+    }
+
+    a:visited {
+        color: #6d1d95;
+    }
+
+    /* レイアウト切替 */
+    @media (min-width: 769px) {
+        .media {
+            flex-direction: row-reverse;
+            align-items: flex-start;
+        }
+    }
+
+    @media (max-width: 768px) {
+        img {
+            max-width: 360px;
+        }
+    }
+</style>

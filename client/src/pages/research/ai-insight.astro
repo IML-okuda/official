@@ -1,0 +1,82 @@
+---
+// layout: ../../layouts/ResearchTopicLayout.astro
+// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// tags: ["高精細画像 AI", "テクスチャ識別"]
+import Fig from "@/components/Fig.astro";
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+
+<ResearchTopicLayout title={"人の潜在的思考をAIがひもとく"}>
+    <h1 class="title">人の潜在的思考をAIがひもとく</h1>
+    <div class="research-body">
+        <p>
+            本研究は，専門家の対話術を模倣する生成AIチャットボットにRAG（Retrieval-Augmented Generation；検索拡張生成）を統合し，人の潜在的思考を丁寧に掘り起こす仕組みを探究する．
+            質問の順序化，反証の誘導，疑問解決といった方略をモデル化し，RAGで個別文脈や事例・規範知を都度取り込みながら，表出されにくい思考を根拠付きで可視化します．教育と意思決定支援への適用を通じて，思考の質の向上と合意形成の効率化を目指します．
+        </p>
+    </div>
+    <div class="research-body">
+        <ul>
+            <li>目的：潜在思考の可視化を，生成ＡＩ×RAGにより高信頼・高再現性で実現する．</li>
+            <li>LLMによる方略選択（質問順序化／比喩生成／反証誘導）＋RAGによる動的知識注入．</li>
+            <li>RAG基盤：教材・議事録・規程・専門辞典・過去事例からの高速検索と根拠リンク提示．</li>
+            <li>専門家の思考探索術をAIに組み込む．</p></li>
+            <li>想定応用：ニーズ発掘，学習者のリフレクション支援，研究計画レビュー，組織の意思決定会議のファシリテーション．</li>
+        </ul>
+    </div>
+    <img src="/fig/ai-insight-1.png" class="fig-card" />
+</ResearchTopicLayout>
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .research-body ul {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .fig-card {
+        display: inline-block;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        line-height: 0;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .fig-card img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+    }
+</style>
