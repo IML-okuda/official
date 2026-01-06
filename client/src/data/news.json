@@ -1,5 +1,24 @@
 [
     {
+        "date": "2025/12",
+        "items": [
+            {
+                "title":"吉田君の敵対的摂動に関する論文がIEEE Accessに採択されました．",
+                "href": "https://ieeexplore.ieee.org/document/11314522",
+                "authors":[]
+            }
+        ]
+    },
+    {
+        "date": "2025/12",
+        "items": [
+            {
+                "title":"澤田君のアーキテクチャのバイアスに関する研究成果がIEVCに，中山君の半教師あり学習に関する研究成果がIEVCに，伊藤君の形状バイアスに関する研究成果がIWAITに採択されました",
+                "authors":[]
+            }
+        ]
+    },
+    {
         "date": "2025/09",
         "items": [
             {
