@@ -3,7 +3,7 @@
         "date": "2026/2",
         "items": [
             {
-                "title":"吉田君の研究が学術雑誌Scienceを発⾏するAAASの海外ニュースサイトで紹介されました",
+                "title":"吉田君の研究が学術雑誌Scienceを発⾏するAAAS運営の海外ニュースサイトで紹介されました",
                 "href": "https://www.eurekalert.org/news-releases/1113572",
                 "authors":[]
             }
@@ -28,6 +28,16 @@
             }
         ]
     },    
+    {
+        "date": "2026/01",
+        "items": [
+            {
+                "title":"今村君が同志社大学外国語honors（ドイツ語）に選ばれ，表彰されました．",
+                "href": "https://www.doshisha.ac.jp/news/detail/001-LOmnHO.html",
+                "authors":[]
+            }
+        ]
+    },   
     {
         "date": "2025/12",
         "items": [
