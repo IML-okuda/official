@@ -1,8 +1,3 @@
-import {
-  FileTextIcon,
-  GitHubLogoIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
 import { Header } from "../header";
 import * as styles from "./common-header.css";
 
@@ -63,19 +58,20 @@ export const CommonHeader = () => {
       }
       menu={[
         {
+          href: "/#news",
+          text: "News",
+        },
+        {
+          href: "/#research",
+          text: "研究 / Research",
+        },
+        {
+          href: "/#industry",
+          text: "企業の方へ",
+        },
+        {
           href: "https://researchmap.jp/okdms",
-          icon: <PersonIcon width="1em" height="1em" />,
           text: "Research Map",
-        },
-        {
-          href: "https://scholar.google.com/citations?user=YePYNYkAAAAJ&hl=en",
-          icon: <FileTextIcon width="1em" height="1em" />,
-          text: "Publications",
-        },
-        {
-          href: "https://github.com/IML-okuda",
-          icon: <GitHubLogoIcon width="1em" height="1em" />,
-          text: "GitHub",
         },
       ]}
     />

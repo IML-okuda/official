@@ -1,0 +1,159 @@
+---
+import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
+---
+<ResearchTopicLayout title={"企業連携のご案内"}>
+    <h1 class="title">企業連携のご案内</h1>
+
+    <div class="research-body">
+        <p class="contact-top">
+            連絡先: masokuda[atto_mark]mail.doshisha.ac.jp
+        </p>
+        <p>
+            本研究室では，企業との共同研究，AI・DX支援，技術顧問，講演・研修のご依頼を受け付けています．AI・機械学習，信号・画像処理，データ分析，センシング，DX推進を中心に，研究段階の技術開発から現場実装，事業化まで一貫して支援しています．これまで20年以上にわたり，上場企業，中小企業，外資系企業，ベンチャー企業など，多様な企業との産学連携に携わってきました．現場の課題に即した実践的な連携を重視し，研究成果の社会実装や製品化にも取り組んでいます．共同での助成金申請や学会発表の実績に加え，グッドデザイン賞やDX関連の賞の取得経験もあります．また，研究室発の技術「<a href="https://textorage.com/kabe-pita/">かべぴた</a>」のように，事業化に至った事例もあり，新規事業や製品開発を見据えたご相談にも対応します．
+        </p>
+    </div>
+
+    <h2 class="sub-title">支援内容</h2>
+
+    <div class="research-body">
+        <h3 class="sub-title-s">共同研究</h3>
+        <p>
+            企業が抱える技術課題や新規事業テーマに対して，学術的知見と実装力の両面から共同研究を行っています．課題設定，データ収集，アルゴリズム設計，評価実験，実証まで，目的に応じて柔軟に対応いたします．基礎検討段階のテーマから，PoC（概念実証），実用化を見据えた開発までご相談を受け付けます．これまでに，社内研究開発の支援，AI系スマートフォンアプリ開発，画像処理エンジン開発など，さまざまなテーマで実績があります．また，共同研究を通じて，助成金申請や学会発表につなげてきた実績もあります．
+        </p>
+
+        <h3 class="sub-title-s">AI・DX支援</h3>
+        <p>
+            現場の業務課題を整理し，AIやデータ活用による改善可能性を検討します．品質評価，予測分析，生成AI導入による業務改善などを対象に，導入可能性の診断からプロトタイプ開発，運用設計まで支援いたします．課題がまだ整理しきれていない段階からでも，実現可能な方向性を一緒に検討できます．
+        </p>
+
+        <h3 class="sub-title-s">技術顧問</h3>
+        <p>
+            研究開発方針の整理，技術選定，AI導入戦略，大学との連携設計などについて，技術顧問として継続的に助言いたします．社内に専門人材が不足している場合や，新規技術テーマを中長期的に育てたい場合にも有効です．技術的な可能性だけでなく，実装や事業展開，業務効率化まで見据えた支援を重視しています．
+        </p>
+
+        <h3 class="sub-title-s">講演・研修</h3>
+        <p>
+            AI，画像処理，データサイエンス，DX推進，産学連携，研究開発の進め方などをテーマとした講演・研修に対応しています．企業向けセミナー，新人研修，管理職向けDX研修，自治体・団体主催の講演など，対象者に応じた内容を受け付けています．
+        </p>
+    </div>
+
+    <h2 class="sub-title">このようなご相談に対応しています</h2>
+    <div class="research-body">
+        <ul>
+            <li>AIを用いた現場課題解決</li>
+            <li>自社独自のデータを活用した新しいサービスや製品の検討</li>
+            <li>社内の研究開発について継続的に相談できる技術顧問</li>
+            <li>社員向けAI・DXの講演や研修の実施</li>
+        </ul>
+    </div>
+
+    <h2 class="sub-title">ご留意事項</h2>
+    <div class="research-body">
+        <p>
+            共同研究等が本契約となる場合は，大学との契約となります．また，技術顧問，AI・DX支援，講演・研修に関しては，大学の兼業・兼職規定の範囲内での対応となります．内容や実施形態によっては，大学内での手続きや調整をお願いする場合がありますので，あらかじめご了承ください．        </p>
+    </div>
+
+    <h2 class="sub-title">お問い合わせ</h2>
+    <div class="research-body">
+        <p>
+            下記メールよりご連絡ください．ご相談内容が具体化していない段階でも差し支えありません．課題の整理からご一緒に検討いたします．まずはお気軽にお問い合わせください．
+        </p>
+        <p class="contact">
+            連絡先: masokuda[atto_mark]mail.doshisha.ac.jp
+        </p>
+    </div>
+</ResearchTopicLayout>
+
+<style>
+    .title {
+        position: relative;
+        padding-left: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 4px;
+        height: 2.4rem;
+        background: #7c3aed;
+        border-radius: 2px;
+    }
+
+    .research-body {
+        font-size: clamp(16px, 1.6vw, 18px);
+        color: #222;
+        line-height: 1.8;
+        max-width: 38em;
+        margin-inline: auto;
+        margin-block: 0.9em 1.2em;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+
+    .research-body p {
+        text-indent: 1em;
+    }
+
+    .sub-title {
+        margin: 2rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    .sub-title-s {
+        margin: 1.5rem 0 0.3rem;
+        font-size: 1.1rem;
+        color: #333;
+        position: relative;
+        padding-left: 0.6rem;
+    }
+
+    .sub-title-s::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.2em;
+        width: 3px;
+        height: 1.2em;
+        background: #a061ff;
+        border-radius: 2px;
+    }
+
+    ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-top {
+        font-weight: bold;
+        text-indent: 0 !important;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    .contact {
+        margin-top: 1.5rem;
+        font-weight: bold;
+        text-indent: 0 !important;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: none;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+</style>

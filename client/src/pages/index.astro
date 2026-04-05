@@ -182,7 +182,7 @@ const news: NewsItem[] = [
       flexDirection: "column",
     }}
   >
-    <section>
+    <section id="news">
       <h2
         style={{
           paddingBottom: "2rem",
@@ -212,6 +212,7 @@ const news: NewsItem[] = [
     </section>
 
     <section
+      id="research"
       style={{
         gap: "1.5rem",
         display: "flex",
@@ -294,6 +295,31 @@ const news: NewsItem[] = [
           body={"過去の卒論・修論テーマを紹介します．"}
           imgSrc={"fig/other-projects-img.png"}
         />
+    </section>
+
+    <section
+      id="industry"
+      style={{
+        gap: "1.5rem",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <h2
+        style={{
+          paddingBottom: "2rem",
+          fontSize: "2rem",
+          borderBottom: "1px solid #eee",
+        }}
+      >
+      企業の方へ
+      </h2>
+      <p style={{ lineHeight: "1.8", color: "#333" }}>
+        本研究室では，企業との共同研究，AI・DX支援，技術顧問，講演・研修のご依頼を受け付けています．AI・機械学習，信号・画像処理，データ分析，センシング，DX推進を中心に，研究開発から現場実装，事業化まで一貫して支援しています．これまで20年以上にわたり，上場企業，中小企業，外資系企業，ベンチャー企業など，多様な企業との産学連携に取り組んできました．現場課題に即した実践的な連携を重視している点が，本研究室の特長です．詳しくは<a href="/research/Industry-collab/" style="color: #4a7aff; text-decoration: underline;">こちらのページ</a>をご覧ください．
+      </p>
+      <p style={{ lineHeight: "1.8", color: "#555" }}>
+        連絡先: masokuda[atto_mark]mail.doshisha.ac.jp
+      </p>
     </section>
   </main>
 </Layout>
