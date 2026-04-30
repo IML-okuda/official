@@ -1,26 +1,33 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
+// title: 高精細テクスチャ基盤モデルとDX / High-definition-texture-foundation-model-and-DX
 // tags: ["高精細画像 AI", "テクスチャ識別"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
-<ResearchTopicLayout title={"高精細テクスチャ識別とDX"}>
-    <h1 class="title">高精細テクスチャ識別とDX</h1>
+<ResearchTopicLayout title={"高精細テクスチャ基盤モデルとDX"}>
+    <h1 class="title">高精細テクスチャ基盤モデルとDX</h1>
 
-    <div class="media">
-        <div class="media-body">
-            <div class="research-body">
-                <p>
-                    プロでも判断に迷う，酷似した材料の模様．さらに，太陽光や室内灯など，光の当たり方によってモノの見え方は大きく変わります．この「照明環境の変化」は，AIによる画像認識の精度を著しく低下させる大きな壁でした．
-                    私たちはこの課題に対し，独自のアプローチで挑んでいます．多様な撮影環境に左右されない，ロバストな高精度テクスチャ識別システムの開発に成功しました．この技術は，<a href="https://komatsu-coltd.co.jp/">大手企業</a>との共同研究を通じて壁紙識別アプリとしてリリースされ，すでに社会でその価値を証明しています．
-                </p>
-            </div>
-        </div>
-        <figure>
-            <Fig src={"/fig/kabepita-app.png"} caption={"壁紙識別アプリ「かべぴた」の画面イメージ"} width={300} />
-        </figure>
+    <div class="research-body">
+        <h2 class="sub-title">Fine-grainedテクスチャ基盤モデル</h2>
+        <p>
+            私たちは，従来のテクスチャ解析の限界を超える「Fine-grained（細粒度）テクスチャ分類」の研究に取り組んでいます．肉眼では判別が困難な微細な差異を，高度な表現学習によってモデル化．リモートセンシングによる広域地表面解析から，建築資材の品質管理まで，あらゆるドメインに適用可能な革新的な「テクスチャ基盤モデル」の開発を目指します．
+        </p>
     </div>
+    <figure>
+        <Fig src={"/fig/finegrained-tex.png"} caption={"（上）従来のテクスチャ分類の例 Describable Textures Dataset (DTD)<br />（下）本研究で取り扱うFine-grainedテクスチャ分類の例"} width={500} />
+    </figure>
+
+    <div class="research-body">
+        <h2 class="sub-title">DX応用</h2>
+        <p>
+            プロでも判断に迷う，酷似した材料の模様．さらに，太陽光や室内灯など，光の当たり方によってモノの見え方は大きく変わります．この「照明環境の変化」は，AIによる画像認識の精度を著しく低下させる大きな壁でした．
+            私たちはこの課題に対し，独自のアプローチで挑んでいます．多様な撮影環境に左右されない，ロバストな高精度テクスチャ識別システムの開発に成功しました．この技術は，<a href="https://komatsu-coltd.co.jp/">大手企業</a>との共同研究を通じて壁紙識別アプリとしてリリースされ，すでに社会でその価値を証明しています．
+        </p>
+    </div>
+    <figure>
+        <Fig src={"/fig/kabepita-app.png"} caption={"壁紙識別アプリ「かべぴた」の画面イメージ"} width={300} />
+    </figure>
     <div class="research-body">
         <h2 class="sub-title">様々なメディアで紹介されました！</h2>
         <ul>

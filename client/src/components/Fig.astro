@@ -27,6 +27,6 @@ const { src, caption, width = 300 }: Props = Astro.props;
       textAlign: "center",
     }}
   >
-    {caption}
+    <Fragment set:html={caption} />
   </p>
 </div>
