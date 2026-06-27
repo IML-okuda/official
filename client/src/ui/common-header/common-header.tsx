@@ -66,6 +66,10 @@ export const CommonHeader = () => {
           text: "研究 / Research",
         },
         {
+          href: "/publication.html",
+          text: "Publication",
+        },
+        {
           href: "/#industry",
           text: "企業の方へ",
         },

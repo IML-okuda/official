@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="ja" xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>研究業績リスト</title>
+<style>:root {
+ color-scheme: light;
+ --text: #111827;
+ --muted: #4b5563;
+ --line: #e5e7eb;
+ --accent: #1d4ed8;
+ --accent-soft: #eff6ff;
+ --bg: #ffffff;
+ --soft: #f8fafc;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+ margin: 0;
+ background: var(--bg);
+ color: var(--text);
+ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Yu Gothic", "Yu Gothic UI", Meiryo, sans-serif;
+ line-height: 1.72;
+ font-size: 16px;
+}
+main {
+ max-width: 1120px;
+ margin: 0 auto;
+ padding: 48px 24px 72px;
+}
+.site-header {
+ margin-bottom: 36px;
+ padding: 0 0 24px;
+ border-bottom: 1px solid var(--line);
+}
+h1 {
+ margin: 0;
+ font-size: clamp(2rem, 4vw, 3rem);
+ letter-spacing: 0.02em;
+ line-height: 1.25;
+}
+.lead {
+ margin: 10px 0 0;
+ color: var(--muted);
+ font-size: 0.98rem;
+}
+.section-title {
+ margin: 46px 0 18px;
+ padding-bottom: 10px;
+ border-bottom: 2px solid var(--line);
+ font-size: 1.35rem;
+ line-height: 1.4;
+}
+.publication-list {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ counter-reset: pub;
+}
+.publication-item {
+ counter-increment: pub;
+ display: grid;
+ grid-template-columns: 3.2rem minmax(0, 1fr);
+ gap: 0.9rem;
+ padding: 16px 0;
+ border-bottom: 1px solid var(--line);
+}
+.publication-item::before {
+ content: counter(pub);
+ align-self: start;
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ min-width: 2.4rem;
+ height: 2.4rem;
+ border-radius: 999px;
+ background: var(--soft);
+ color: var(--muted);
+ font-variant-numeric: tabular-nums;
+ font-size: 0.86rem;
+ font-weight: 600;
+}
+.publication-text { margin: 0; }
+.publication-text {
+ margin: 0;
+ hanging-punctuation: allow-end;
+}
+.publication-text .title {
+ font-weight: 500;
+}
+.publication-text .source-note {
+ color: var(--muted);
+}
+.publication-item {
+ align-items: start;
+}
+@media print {
+ .publication-text { line-height: 1.5; }
+}
+
+a {
+ color: var(--accent);
+ text-decoration: none;
+}
+a:hover, a:focus { text-decoration: underline; }
+.doi-link {
+ display: inline-block;
+ margin-left: 0.15em;
+ padding: 0.05em 0.45em;
+ border-radius: 999px;
+ background: var(--accent-soft);
+ font-size: 0.92em;
+ line-height: 1.55;
+ word-break: break-word;
+}
+@media (max-width: 640px) {
+ main { padding: 32px 18px 56px; }
+ .publication-item {
+ grid-template-columns: 2.6rem minmax(0, 1fr);
+ gap: 0.7rem;
+ }
+ .publication-item::before {
+ min-width: 2rem;
+ height: 2rem;
+ }
+}
+@media print {
+ body { font-size: 10.5pt; }
+ main { max-width: none; padding: 0; }
+ .publication-item { break-inside: avoid; grid-template-columns: 2.6rem 1fr; padding: 8px 0; }
+ .doi-link { background: transparent; padding: 0; }
+ a { color: inherit; text-decoration: none; }
+}</style></head>
+<body><main><header class="site-header"><h1>研究業績リスト</h1><p class="lead">Peer-reviewed journal articles and international conference papers.</p><p class="lead source-style-note">表記形式：著者，タイトル，掲載誌・会議名，巻号，ページまたは論文番号，年月，DOI。</p></header><h2 class="section-title" id="peer-reviewed-journal-articles">査読付き学術論文</h2><ul class="publication-list">
+<li class="publication-item"><p class="publication-text">Sota Nakano, Kazuki Iwasaki, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A New Detector of Calcification Regions in Dental Panoramic Radiographs," IEICE Transactions on Fundamentals, Vol. 109-A, No. 6, June 2026. DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.2025SML0004" rel="noopener noreferrer" target="_blank">10.1587/transfun.2025SML0004</a></p></li>
+<li class="publication-item"><p class="publication-text">Masatomo Yoshida, Masahiro Okuda, "IFAP: Input-Frequency Adaptive Adversarial Perturbation via Full-Spectrum Envelope Constraint for Spectral Fidelity," IEEE Access, Vol. 13, pp. 217504-217518, December 2025. DOI: <a class="doi-link" href="https://doi.org/10.1109/ACCESS.2025.3648201" rel="noopener noreferrer" target="_blank">10.1109/ACCESS.2025.3648201</a></p></li>
+<li class="publication-item"><p class="publication-text">Akinori Iwata, Masahiro Okuda, "Quantifying Shape and Texture Biases for Enhancing Transfer Learning in Convolutional Neural Networks," Signals, Vol. 5, No. 4, pp. 721-735, November 2024. DOI: <a class="doi-link" href="https://doi.org/10.3390/signals5040040" rel="noopener noreferrer" target="_blank">10.3390/signals5040040</a></p></li>
+<li class="publication-item"><p class="publication-text">Masatomo Yoshida, Haruto Namura, Masahiro Okuda, "Adversarial Examples for Image Cropping: Gradient-based and Bayesian-optimized Approaches for Effective Adversarial Attack," IEEE Access, pp. 86541-86552, June 2024. DOI: <a class="doi-link" href="https://doi.org/10.1109/ACCESS.2024.3415356" rel="noopener noreferrer" target="_blank">10.1109/ACCESS.2024.3415356</a></p></li>
+<li class="publication-item"><p class="publication-text">Matsuoka, Ryo, and Masahiro Okuda. "Beyond Staircasing Effect: Robust Image Smoothing via ℓ 0 Gradient Minimization and Novel Gradient Constraints," Signals, Vol. 4, No. 4, pp. 669-686, 2023. DOI: <a class="doi-link" href="https://doi.org/10.3390/signals4040037" rel="noopener noreferrer" target="_blank">10.3390/signals4040037</a></p></li>
+<li class="publication-item"><p class="publication-text">T Itasaka, M Okuda. "Zero-shot Hyperspectral Image Denoising using self-completion with 3D Random patterned masks." IEEE Access, 2023. DOI: <a class="doi-link" href="https://doi.org/10.1109/ACCESS.2023.3298447" rel="noopener noreferrer" target="_blank">10.1109/ACCESS.2023.3298447</a></p></li>
+<li class="publication-item"><p class="publication-text">Akinori Iwata, Masahiro Okuda "CNN Pretrained Model with Shape Bias using Image Decomposition," APSIPA Transactions on Signal and Information Processing, Vol. 12, No. 1, 2023. DOI: <a class="doi-link" href="https://doi.org/10.1561/116.00000113" rel="noopener noreferrer" target="_blank">10.1561/116.00000113</a></p></li>
+<li class="publication-item"><p class="publication-text">Mia Rizkinia, Nathaniel Faustine, Masahiro Okuda, “Conditional Generative Adversarial Networks with Total Variation and Color Correction for Generating Indonesian Face Photo from Sketch”, Applied Sciences, Vol. 12, No. 19, Article 10006, 2022. DOI: <a class="doi-link" href="https://doi.org/10.3390/app121910006" rel="noopener noreferrer" target="_blank">10.3390/app121910006</a></p></li>
+<li class="publication-item"><p class="publication-text">Tatsuki Itasaka, Ryo Matsuoka, Masahiro Okuda, “Constrained Design of FIR Filters with Sparse Coefficients”, IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E-104-A, No. 11, pp. 1499-1508, 2021. DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.2020KEP0014" rel="noopener noreferrer" target="_blank">10.1587/transfun.2020KEP0014</a></p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Tatsuya Baba, Shunsuke Ono, Masahiro Okuda, Yusuke Tatesumi, and Paul Perrotin, “Guided Facial Skin Color Correction,” Signals, Vol. 2, No. 3, pp. 540-558, 2021. DOI: <a class="doi-link" href="https://doi.org/10.3390/signals2030033" rel="noopener noreferrer" target="_blank">10.3390/signals2030033</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Yuzuriha, Ryuji Kurihara, Ryo Matsuoka, Masahiro Okuda, "TNNG: Total Nuclear Norms of Gradients for Hyperspectral Image Prior", Remote Sensing, Vol. 13, No. 4, Article 819, 2021. DOI: <a class="doi-link" href="https://doi.org/10.3390/rs13040819" rel="noopener noreferrer" target="_blank">10.3390/rs13040819</a></p></li>
+<li class="publication-item"><p class="publication-text">Ferdi Andika, Mia Rizkinia, Masahiro Okuda, "A Hyperspectral Anomaly Detection Algorithm Based on Morphological Profile and Attribute Filter with Band Selection and Automatic Determination of Maximum Area", Remote Sensing, Vol. 12, No. 20, Article 3387, 2020. DOI: <a class="doi-link" href="https://doi.org/10.3390/rs12203387" rel="noopener noreferrer" target="_blank">10.3390/rs12203387</a></p></li>
+<li class="publication-item"><p class="publication-text">Mia Rizkinia, Masahiro Okuda, "Evaluation of primal-dual splitting algorithm for MRI reconstruction using spatio-temporal structure Tensor and L1-2 norm", Makara Journal of Technology, Vol. 23, No. 3, pp. 126-130, 2020. DOI: <a class="doi-link" href="https://doi.org/10.7454/mst.v23i3.3892" rel="noopener noreferrer" target="_blank">10.7454/mst.v23i3.3892</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Shunsuke Ono, Masahiro Okuda, "Transformed-Domain Robust Multiple-Exposure Blending with Huber Loss", IEEE Access, Vol. 7, pp. 162282-162296, 2019. (IF: 4.098). DOI: <a class="doi-link" href="https://doi.org/10.1109/ACCESS.2019.2951817" rel="noopener noreferrer" target="_blank">10.1109/ACCESS.2019.2951817</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Shirai Keiichiro, Masahiro Okuda, "Reference-based Local Color Distribution Transformation Method and its Application to Image Integration," Signal Processing: Image Communication, Vol. 76, pp. 231-242, August 2019. (IF: 2.814). DOI: <a class="doi-link" href="https://doi.org/10.1016/j.image.2019.04.020" rel="noopener noreferrer" target="_blank">10.1016/j.image.2019.04.020</a></p></li>
+<li class="publication-item"><p class="publication-text">Masataka Fujimoto, Masahiro Okuda, Shinji Yoshii, Satoshi Ikezawa, Toshitsugu Ueda, Herve Tassery, Frederic Cuisinier, Chiaki Kitamura, “Endoscopic System Based on Intraoral Camera and Image Processing,” IEEE Transactions on Biomedical Engineering, Vol. 66, No. 4, pp. 1026-1033, April 2019. (IF: 4.491). DOI: <a class="doi-link" href="https://doi.org/10.1109/TBME.2018.2866273" rel="noopener noreferrer" target="_blank">10.1109/TBME.2018.2866273</a></p></li>
+<li class="publication-item"><p class="publication-text">Shinji Yoshii, Masataka Fujimoto, Masahiro Okuda, Chiaki Kitamura, “In Vitro Evaluation of a Novel Root Canal Endoscope for Visualizing the Apex of Curved Root Canal Models and an Extracted Tooth,” Journal of Endodontics, 44(12), 1856-1861, December 2018. (IF: 2.833). DOI: <a class="doi-link" href="https://doi.org/10.1016/j.joen.2018.08.014" rel="noopener noreferrer" target="_blank">10.1016/j.joen.2018.08.014</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Seisuke Kyochi, Shunsuke Ono, Masahiro Okuda, "Joint Sparsity and Order Optimization Based on ADMM with Non-Uniform Group Hard Thresholding," IEEE Transactions on Circuits and Systems I: Regular Papers, Vol. 65, No. 5, pp. 1602-1613, May 2018. (IF: 3.934). DOI: <a class="doi-link" href="https://doi.org/10.1109/TCSI.2017.2763969" rel="noopener noreferrer" target="_blank">10.1109/TCSI.2017.2763969</a></p></li>
+<li class="publication-item"><p class="publication-text">白井啓一郎，馬場達也，小野峻佑，奥田正浩, “局所特徴に基づく正則化を用いた画像処理と最適化の役割,” 電子情報通信学会 Fundamental Review （査読付き解説論文）, Vol. 11, No. 1, pp. 40-53 November 2017. DOI: <a class="doi-link" href="https://doi.org/10.1587/essfr.11.1_40" rel="noopener noreferrer" target="_blank">10.1587/essfr.11.1_40</a></p></li>
+<li class="publication-item"><p class="publication-text">Mia Rizkinia, Masahiro Okuda, "Joint Local Abundance Sparse Unmixing for Hyperspectral Images," Remote Sensing, Vol. 9, No. 12, Article 1224, November 2017. (IF: 4.118). DOI: <a class="doi-link" href="https://doi.org/10.3390/rs9121224" rel="noopener noreferrer" target="_blank">10.3390/rs9121224</a></p></li>
+<li class="publication-item"><p class="publication-text">Takaaki Okabe, Masahiro Okuda, "Computationally Efficient Reflectance Estimation for Hyperspectral Images," IEICE Transactions on Information and Systems, Vol. E100-D, No. 9, pp. 2253-2256, September 2017. (IF: 0.54). DOI: <a class="doi-link" href="https://doi.org/10.1587/transinf.2017EDL8051" rel="noopener noreferrer" target="_blank">10.1587/transinf.2017EDL8051</a></p></li>
+<li class="publication-item"><p class="publication-text">松岡諒, 石橋治樹, 馬場達也, 奥田正浩, “露光アンダー/オーバーと焦点ボケを同時にもつ多重露光画像の統合手法,” 電子情報通信学会論文誌(D), Vol. J99-D, No. 10, pp. 1080-1088, October 2016. DOI: <a class="doi-link" href="https://doi.org/10.14923/transinfj.2015JDP7108" rel="noopener noreferrer" target="_blank">10.14923/transinfj.2015JDP7108</a></p></li>
+<li class="publication-item"><p class="publication-text">Mia Rizkinia, Tatsuya Baba, Keiichiro Shirai, Masahiro Okuda, "Local Spectral Component Decomposition for Multi-Channel Image Denoising," IEEE Transactions on Image Processing, Vol. 25, No. 7, pp. 3208-3218, July 2016. (IF: 5.071). DOI: <a class="doi-link" href="https://doi.org/10.1109/TIP.2016.2561320" rel="noopener noreferrer" target="_blank">10.1109/TIP.2016.2561320</a></p></li>
+<li class="publication-item"><p class="publication-text">Tatsuya Baba, Ryo Matsuoka, Keiichiro Shirai, Masahiro Okuda, "Misaligned Image Integration with Local Linear Model," IEEE Transactions on Image Processing, Vol. 25, No. 5, pp. 2035-2044, May 2016. (IF: 5.071). DOI: <a class="doi-link" href="https://doi.org/10.1109/TIP.2016.2535329" rel="noopener noreferrer" target="_blank">10.1109/TIP.2016.2535329</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tomohiro Yamauchi, Tatsuya Baba, Masahiro Okuda, "Weight Optimization for Multiple Image Integration and Its Applications," IEICE Transactions on Information and Systems, Vol. E99-D, No. 1, pp. 228-235, January 2016. (IF: 0.54). DOI: <a class="doi-link" href="https://doi.org/10.1587/transinf.2015EDP7192" rel="noopener noreferrer" target="_blank">10.1587/transinf.2015EDP7192</a></p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tatsuya Baba, Masahiro Okuda, "White Balancing by using Multiple Images via Intrinsic Image Decomposition," IEICE Transactions on Information and Systems, Vol. E98-D, No. 8, pp. 1562-1570, August 2015. (IF: 0.54). DOI: <a class="doi-link" href="https://doi.org/10.1587/transinf.2015EDP7070" rel="noopener noreferrer" target="_blank">10.1587/transinf.2015EDP7070</a></p></li>
+<li class="publication-item"><p class="publication-text">馬場達也, 松岡諒, 小野峻佑, 白井啓一郎, 奥田正浩, “フラッシュ画像とノンフラッシュ画像の凸最適化による画像合成，” 電子情報通信学会論文誌(D)，Vol. J97-D, No. 9, pp. 1406-1415, September 2014.</p></li>
+<li class="publication-item"><p class="publication-text">松岡 諒, 神納 貴生, 奥田 正浩, “HDR画像生成のためのノイズの低減を考慮した多重露光画像統合法，” 電子情報通信学会論文誌(A), Vol. J97-A, No. 3, pp. 209-220, March 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Takao Jinno, Masahiro Okuda, "Quality Evaluation of Decimated Images Using Visual Difference Predictor," IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E96-A, No. 8, pp. 1824-1827, August 2013. (IF: 0.40). DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.E96.A.1824" rel="noopener noreferrer" target="_blank">10.1587/transfun.E96.A.1824</a></p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, "Multiple Exposure Fusion for High Dynamic Range Image," IEEE Transactions on Image Processing, Vol. 21, No. 1, pp. 358-365, January 2012, (IF: 5.071). DOI: <a class="doi-link" href="https://doi.org/10.1109/TIP.2011.2160953" rel="noopener noreferrer" target="_blank">10.1109/TIP.2011.2160953</a></p></li>
+<li class="publication-item"><p class="publication-text">神納貴生，奥田正浩，Nicola Adami，“バイラテラルに基づく多重ビット深度表現の実現，” 電子情報通信学会論文誌(A), Vol. J94-D, No. 12, pp. 1986-1988, December 2011. （特集レター）.</p></li>
+<li class="publication-item"><p class="publication-text">神納貴生，奥田正浩，“HDR監視カメラのための移動物体を考慮したトーンマッピング，” 電子情報通信学会論文誌(A)，Vol. J94-A, No. 6, pp. 426-429, June 2011.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Yusuke Saito, Masahiro Okuda, "A Study on Weighting Scheme for Rational Remez Algorithm," IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E94-A, No. 4, pp. 1144-1147, April 2011. (IF: 0.40). DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.E94.A.1144" rel="noopener noreferrer" target="_blank">10.1587/transfun.E94.A.1144</a></p></li>
+<li class="publication-item"><p class="publication-text">Xinwei Xue, Takao Jinno, Xin Jin, Masahiro Okuda, Satoshi Goto, “Watermarking for HDR Image Robust to Tone Mapping,” IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E94-A, No. 11, pp. 2334-2341, November 2011. (IF: 0.40). DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.E94.A.2334" rel="noopener noreferrer" target="_blank">10.1587/transfun.E94.A.2334</a></p></li>
+<li class="publication-item"><p class="publication-text">Fabrizio Guerrini, Masahiro Okuda, Nicola Adami, Riccardo Leonardi, "High Dynamic Range Image Watermarking Robust Against Tone-Mapping Operators," IEEE Transactions on Information Forensics &amp; Security, Vol. 6, No. 2, pp. 283-295, June 2011. (IF: 5.824). DOI: <a class="doi-link" href="https://doi.org/10.1109/TIFS.2011.2109383" rel="noopener noreferrer" target="_blank">10.1109/TIFS.2011.2109383</a></p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Hironori Kaida, Xinwei Xue, Nicola Adami, Masahiro Okuda, "μ-Law Based HDR Coding and Its Error Analysis," IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E94-A, No. 3 pp. 972-978, March 2011. (IF: 0.40). DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.E94.A.972" rel="noopener noreferrer" target="_blank">10.1587/transfun.E94.A.972</a></p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Kazuya Mouri, Masahiro Okuda, "High Contrast HDR Video Tone Mapping Based on Gamma Curves," IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, E94.A(2), pp. 525-532, February 2011. (IF: 0.40). DOI: <a class="doi-link" href="https://doi.org/10.1587/transfun.E94.A.525" rel="noopener noreferrer" target="_blank">10.1587/transfun.E94.A.525</a></p></li>
+<li class="publication-item"><p class="publication-text">Hiroyuki Inatsuka, Makoto Uchino, Satoshi Ueno, Masahiro Okuda, “Texture Classification for 3D Urban Map,” EURASIP Journal on Image and Video Processing, Vol. 2009, Article ID 432853, 8 pages, June 2009. (IF: 2.455). DOI: <a class="doi-link" href="https://doi.org/10.1155/2009/432853" rel="noopener noreferrer" target="_blank">10.1155/2009/432853</a></p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Nicola Adami, “JPEG Compatible Raw Image Coding Based on Polynomial Tone Mapping Model,” IEICE Transactions on Fundamentals, Vol. E91-A, No. 10, pp. 2928-2933, October 2008. DOI: <a class="doi-link" href="https://doi.org/10.1093/ietfec/e91-a.10.2928" rel="noopener noreferrer" target="_blank">10.1093/ietfec/e91-a.10.2928</a></p></li>
+<li class="publication-item"><p class="publication-text">Shin-ichiro Takahashi, Ishtiaq Rasool Khan, Masahiro Okuda, Masaaki Ikehara, “3D Avatar Modeling and Transmission using Cylinder Mapping,” WSEAS Transactions on Electronics, No. 3, Vol. 5, pp. 57-64, March 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, Shin-ichi Takahashi, “Compression of Human Motion Animation Using the Reduction of Interjoint Correlation,” EURASIP Journal on Image and Video Processing, Vol. 2008, No. 1, Article ID 693427, pp. 657-668, April 2008. (IF: 2.455). DOI: <a class="doi-link" href="https://doi.org/10.1155/2008/693427" rel="noopener noreferrer" target="_blank">10.1155/2008/693427</a></p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Narrow Transition Band FIR Hilbert Transformers with Flat Magnitude Response,” IEEE Signal Processing Letters, Vol. 14, No. 9, pp. 613-616 September 2007. (IF: 2.813). DOI: <a class="doi-link" href="https://doi.org/10.1109/LSP.2007.896180" rel="noopener noreferrer" target="_blank">10.1109/LSP.2007.896180</a></p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Finite Impulse-Response Digital Differentiators for Midband frequencies based on Maximal Linearity Constraints,” IEEE Transactions on Circuits and Systems II, Vol. 54, No. 3, pp. 242-246, March 2007. DOI: <a class="doi-link" href="https://doi.org/10.1109/TCSII.2006.889448" rel="noopener noreferrer" target="_blank">10.1109/TCSII.2006.889448</a></p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, “Interactive Frame Decimation and Watermarking for Human Motion Animation,” International Journal on Graphics, Vision and Image Processing, Vol. 27, No. II, pp. 27-34, August 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Nicola Adami, “Two-Layer Coding Algorithm for High Dynamic Range Images based on Luminance Compensation,” Journal of Visual Communication and Image Representation, Vol. 18, No. 5, pp. 377-386, October 2007. DOI: <a class="doi-link" href="https://doi.org/10.1016/j.jvcir.2007.06.004" rel="noopener noreferrer" target="_blank">10.1016/j.jvcir.2007.06.004</a></p></li>
+<li class="publication-item"><p class="publication-text">白井啓一郎,伊藤尚徳，池原雅章，奥田正浩，“3Dモデル形状とテクスチャ品質保持のためのメッシュパラメータ化，” 電子情報通信学会論文誌(A), Vol. J90, No. 9, pp. 705-714, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Construction of Regular 3D Mesh Models for Real Objects,” International Journal on Graphics, Vision and Image Processing, Vol. 6, No. 3, pp. 23-31, December 2006.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichi Shirai, Kyoko Nagatomo, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Cylindrical Approximation of 3D Meshes and its Application to Similarity Detection,” Journal of Signal Processing, Vol. 10, No. 5, pp. 363-370, September 2006.</p></li>
+<li class="publication-item"><p class="publication-text">白井啓一郎，奥田正浩，池原雅章，“3D モデルの高速な円筒ジオメトリ画像化法，” 電子情報通信学会論文誌(A), Vol. J89-A, No. 7, pp. 629-638, July 2006.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Design of Equiripple Minimum Phase FIR Filters with Ripple Ratio Control,” IEICE Transactions on Fundamentals, Vol. E89-A, No. 3, pp. 751-756, March 2006. DOI: <a class="doi-link" href="https://doi.org/10.1093/ietfec/e89-a.3.751" rel="noopener noreferrer" target="_blank">10.1093/ietfec/e89-a.3.751</a></p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masahiro Yoshida, Kageyuki Kiyose, Masaaki Ikehara, Shin-ichi Takahashi, “Complex Approximation of FIR Digital Filters by Updating Desired Responses,” IEEE Transactions on Signal Processing, Vol. 53, No. 8, pp. 2948-2953, July 2005. DOI: <a class="doi-link" href="https://doi.org/10.1109/TSP.2005.850381" rel="noopener noreferrer" target="_blank">10.1109/TSP.2005.850381</a></p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masahiro Yoshida, Masaaki Ikehara, Shin-ichi Takahashi, “Simultaneous Approximation for Magnitude and Phase Responses of FIR Digital Filters,” IEICE Transactions on Fundamentals, Vol. E87-A, No. 11, pp. 2957-2963, November 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Ryoji Ohba, “Design of FIR Digital Differentiators Using Maximal Linearity Constraints,” IEICE Transactions on Fundamentals, Vol. E87-A, No. 8, pp. 2010-2017, August 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Ishtiaq Rasool Khan, Masaaki Ikehara, Shin-ishi Takahashi, “Quasi-Equiripple Approximation of Minimum Phase FIR Filters by Updating Desired Response,” IEE Vision, Image and Signal Processing, Vol. 151, No. 3, June 2004. DOI: <a class="doi-link" href="https://doi.org/10.1049/ip-vis:20040139" rel="noopener noreferrer" target="_blank">10.1049/ip-vis:20040139</a></p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Shin-ichi Takahashi, “Progressive Geometry Coding of Partitioned 3D Models,” IEICE Transactions on Information and Systems, Vol. E86-D, No. 11, pp. 2418-2425, November 2003.</p></li>
+<li class="publication-item"><p class="publication-text">Kohji Inagaki, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Measuring Errors on 3D Meshes Using Pixel Based Search,” IEICE Transactions on Information and Systems, Vol. E86-D, No. 9, pp. 1903-1908, September 2003.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Kyoko Nagatomo, Masaaki Ikehara, Shin-ichi Takahashi, “Compression of 3D Models by Remesh on Texture Images,” IEICE Transactions on Information and Systems, Vol. E86-D, No. 6, pp. 1110-1115, June 2003.</p></li>
+<li class="publication-item"><p class="publication-text">宇戸寿幸，奥田正浩，池原雅章，“クワッドツリー分割に基づく画像符号化法を用いたウェーブレットパケット，” 電子情報通信学会論文誌(A) Vol. J86-A, No. 2, pp. 111-118, February 2003.</p></li>
+<li class="publication-item"><p class="publication-text">宇戸寿幸，河野裕，奥田正浩，池原雅章，高橋進一，“IIRフィルタを用いた可逆及び非可逆変換と画像符号化への応用，” 電子情報通信学会論文誌(A) Vol. J84-A, No. 7, pp. 893-900, July 2001.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Sanjit K. Mitra, Masaaki Ikehara, Shin-ichi Takahashi, "Filter Banks with Nonlinear Lifting Steps for Lossless Image Compression," IEICE Transactions on Fundamentals, Vol. E84-A, No. 3, pp. 797-801, March 2001.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩, 鎌田政人，高橋進一，“Hypercomplex係数直交ディジタルフィルタの実現，” 電子情報通信学会論文誌(A), Vol. J83-A, No. 5, pp. 458-465, May 2000.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩, 清瀬影之，池原雅章，高橋進一，”所望応答の変換によるFIRディジタルフィルタの複素領域における準等リプル近似，” 電子情報通信学会論文誌(A), Vol. J82-A, No. 8, pp. 1312-1319, August 1999.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Design of Biorthogonal Filter Banks Composed of Linear Phase IIR Filters,” IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E81-A, No. 11, pp. 2449-54, November 1998.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Fast and Stable Least Squares Approach for the Design of Linear Phase FIR Filters,” IEEE Transactions on Signal Processing, Vol. 46, No. 6, pp. 1485-93, June 1998. DOI: <a class="doi-link" href="https://doi.org/10.1109/78.678462" rel="noopener noreferrer" target="_blank">10.1109/78.678462</a></p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩, 池原雅章, 高橋進一，“２次元FIRディジタルフィルタのための逆行列演算を含まない最小自乗法，” 電子情報通信学会論文誌(A), Vol. J80-A, No. 3, pp. 463-471, March 1997.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩, 池原雅章, 高橋進一，“IIRディジタルフィルタの最小自乗法と等リプル解への応用，” 電子情報通信学会論文誌(A), Vol. J80-A, No. 4 pp. 612-619, April 1997.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩, 福岡崇, 池原雅章, 高橋進一，“因果性を満たす２分割完全再構成IIRフィルタバンクの設計,” 電子情報通信学会論文誌(A), Vol. J80-A, No. 3 pp. 454-462, March 1997.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Simultaneous Approximation for IIR Digital Filters with Log Magnitude and Phase Response,” IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences, Vol. E79-A No. 11 1879-1885, November 1996.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩，池原雅章，高橋進一，“IIRディジタルフィルタの複素チェビシェフ近似，” 電子情報通信学会論文誌(A) Vol. J78-A, No. 6, pp. 651-658, June 1995.</p></li>
+<li class="publication-item"><p class="publication-text">奥田正浩，松山浩二郎，池原雅章，“重みつき最小自乗法を用いた全域通過回路の群遅延特性近似，” 電子情報通信学会論文誌(A) Vol. J78-A, No. 9, pp. 1103-1110, September 1995.</p></li>
+</ul><h2 class="section-title" id="peer-reviewed-international-conference-papers">査読付き国際会議論文</h2><ul class="publication-list">
+<li class="publication-item"><p class="publication-text">Shogo Nakayama, Masahiro Okuda, "Improving Semi-Supervised Contrastive Learning via Entropy-Weighted Confidence Integration of Anchor-Positive Pairs," IIEEJ International Workshop on Image Electronics and Visual Computing (IEVC), March 2026.</p></li>
+<li class="publication-item"><p class="publication-text">Takito Sawada, Akinori Iwata, Masahiro Okuda, "Quantifying and Inducing Shape Bias in CNNs via Max-Pool Dilation," IIEEJ International Workshop on Image Electronics and Visual Computing (IEVC), March 2026.</p></li>
+<li class="publication-item"><p class="publication-text">Masaki Ito, Daichi Iwadare, Masahiro Okuda, "Considerations on Convolutional Neural Network Architectures Effective for Texture Classification," The International Workshop on Advanced Image Technology (IWAIT), January 2026.</p></li>
+<li class="publication-item"><p class="publication-text">Sota Nakano, Naruki Tochihara, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A Data Augmentation Method using Pix2Pix for Calcification Region Detection from Dental Panoramic Radiographs," International Workshop on Smart Info-Media Systems in Asia (SISA), pp. 86-90, November 2025. DOI: <a class="doi-link" href="https://doi.org/10.34385/proc.96.RS2-04" rel="noopener noreferrer" target="_blank">10.34385/proc.96.RS2-04</a></p></li>
+<li class="publication-item"><p class="publication-text">Shogo Nakayama, Masahiro Okuda, "Integrating Distribution Matching into Semi-Supervised Contrastive Learning for Labeled and Unlabeled Data," The 40th International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), pp. 1121-1125, July 2025.</p></li>
+<li class="publication-item"><p class="publication-text">Masatomo Yoshida, Haruto Namura, Nicola Adami, Masahiro Okuda, "Skeletonization-Based Adversarial Perturbations on Large Vision Language Model's Mathematical Text Recognition," The 40th International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), pp. 565-569, July 2025.</p></li>
+<li class="publication-item"><p class="publication-text">Haruto Namura, Masatomo Yoshida, Nicola Adami, Masahiro Okuda, "Adversarial Attacks on Text-Recognizable Foundation Models: Optimized Search Space Reduction via Skeletonization", ECCV24 Workshop, EVAL-FoMo 24, Milan Italy, September 30, 2024.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuki Itasaka, and Masahiro Okuda. "Zero-Shot Hyperspectral Image Denoising With Self-Completion with Patterned Masks." 2023 IEEE International Conference on Image Processing (ICIP). IEEE, 2023.</p></li>
+<li class="publication-item"><p class="publication-text">Haruto Namura, Tatsuki Itasaka, and Masahiro Okuda. "Effects on Selective Removal of Adversarial Examples for Noisy X-ray Images." 2023 5th International Conference on Intelligent Medicine and Image Processing (IMIP). IEEE, 2023.</p></li>
+<li class="publication-item"><p class="publication-text">Akinori Iwata, Masahiro Okuda, “Shape-Bias Evaluation of Pretrained Models Using Image Decomposition,” IEEE Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), ThAM1-1, 4 pages, Chiang Mai, Thailand, November 2022.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuki Itasaka and Masahiro Okuda, “Effects of Incorporating a Deep-Unfolding Framework into a Deep Neural Network: Implications for Image Restoration,” IEEE Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), WedAM1-4, 4 pages, Chiang Mai, Thailand, November 2022.</p></li>
+<li class="publication-item"><p class="publication-text">Haruto Toyonaga and Masahiro Okuda, “Wallpaper Dataset for Image Classification”, IEEE 11th Global Conference on Consumer Electronics (GCCE), 4 pages, (2022). DOI: <a class="doi-link" href="https://doi.org/10.1109/GCCE56475.2022.10014404" rel="noopener noreferrer" target="_blank">10.1109/GCCE56475.2022.10014404</a></p></li>
+<li class="publication-item"><p class="publication-text">Masatomo Yoshida, Masahiro Okuda, “Adversarial Examples for Image Cropping in Social Media, IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), MMSP-10.6, Singapore, May 2022.</p></li>
+<li class="publication-item"><p class="publication-text">Shuhei Takehisa, Masahiro Okuda, “Denoising Hyperspectral Images using Interband Correlation”, APSIPA Annual Summit and Conference, December OD-IVM-1.7, 2021.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuki Itasaka, Masahiro Okuda, “Study on Generalization Performance of Deep Image Restoration with Unfolding on Small Datasets”, APSIPA Annual Summit and Conference, December OD-RA.3, 2021. (Research Abstract) アブスト査読.</p></li>
+<li class="publication-item"><p class="publication-text">Itasaka APSIPA 2020.</p></li>
+<li class="publication-item"><p class="publication-text">Yuzuriha, Ryota, et al. "Total nuclear norms of gradients for hyperspectral image pansharpening." IGARSS 2020-2020 IEEE International Geoscience and Remote Sensing Symposium. IEEE, 2020.</p></li>
+<li class="publication-item"><p class="publication-text">Ryuji Imamura, Tatsuki Itasaka, Masahiro Okuda, "Zero-shot Hyperspectral Image Denoising with Separable Image Prior," ICCV 2019 MDALC Workshop, pp. --, Seoul Korea, Oct. 2019.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuki Itasaka, Ryuji Imamura, Masahiro Okuda, "DNN-based Hyperspectral Image Denoising with Spatio-spectral Pre-training," IEEE 8th Global Conference on Consumer Electronics (GCCE), pp. 568-572, Osaka Japan, Oct. 2019.</p></li>
+<li class="publication-item"><p class="publication-text">Makoto Watanabe, Ryo Matsuoka, Seisuke Kyochi, Shunsuke Ono, Masahiro Okuda, "Multiscale Structure Tensor Total Variation for Image Recovery," IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), pp. 1867-1871, Brighton, UK, May 2019.</p></li>
+<li class="publication-item"><p class="publication-text">Ryuji Imamura, Masahiro Okuda, "MOCAP Signal Interpolation using Low-rank Matrix Recovery," APSIPA Annual Summit and Conference, pp. 871-874, Hawaii, November 2018.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Shunsuke Ono, Masahiro Okuda, "High Dynamic Range Image Generation based on Convolutional Weight Optimization Robust to Mixed Noise Removal", APSIPA Annual Summit and Conference 2018, pp. 12-15, Hawaii, November 2018.</p></li>
+<li class="publication-item"><p class="publication-text">Tomoki Miyoshi, Masahiro Okuda, "Performance Comparison of MRI Restoration Methods with Low-rank Priors", IEEE 7th Global Conference on Consumer Electronics (GCCE), pp. 541-544, Nara, October 2018.</p></li>
+<li class="publication-item"><p class="publication-text">Ryota Yuzuriha, Masahiro Okuda, "Shape-aware Medical Image Enhancement by Weighted Total Variation", IEEE 7th Global Conference on Consumer Electronics (GCCE), pp. 537-540, Nara, October 2018.</p></li>
+<li class="publication-item"><p class="publication-text">Yuji Akai, Toshihiro Shibata, Ryo Matsuoka, Masahiro Okuda, "L0 Smoothing based on Gradient Constraints," 25th IEEE International Conference on Image Processing (ICIP), pp. 3943-3947, Athens, Greece, October 2018.</p></li>
+<li class="publication-item"><p class="publication-text">Masaki Onuki, Yuichi Tanaka, Masahiro Okuda, “Improved Eigenvalue Shrinkage using Weighted Chebyshev Polynomial Approximation”, IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), pp. 4541-4545, New Orleans, March 2017.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuya Baba, Keishu Nakamura, Seisuke Kyochi, Masahiro Okuda, “Image Enhancement Method for Underwater Images based on Discrete Cosine Eigenbasis Transformation,” IEEE International Conference on Image Processing (ICIP), pp. 4272-4276, Beijing, China, September 2017.</p></li>
+<li class="publication-item"><p class="publication-text">Takaaki Okabe, Masahiro Okuda, “'Hyperspectral Reflectance Estimation based on Singular Value Thresholding,” ITC-CSCC, Busan, Korea, July 2017.</p></li>
+<li class="publication-item"><p class="publication-text">Ryuji Kurihara, Shunsuke Ono, Keiichiro Shirai, Masahiro Okuda, “Hyperspectral Image Restoration based on Spatio-spectral Structure Tensor Regularization,” in Proc. Euro. Signal Process. Conf. (EUSIPCO), pp. 488-492, Island of Kos, Greece, September 2017.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Shunsuke Ono, Masahiro Okuda, “Frequency Spectrum Regularization for Pattern Noise Removal based on Image Decomposition,” in Proc. Euro. Signal Process. Conf. (EUSIPCO), pp. 1529-1533, Island of Kos, Greece, September 2017.</p></li>
+<li class="publication-item"><p class="publication-text">Shunsuke Ono, Keiichiro Shirai, Masahiro Okuda,"Vectorial Total Variation based on Arranged Structure Tensor for Multichannel Image Restoration," IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), pp. 4528-4532, Shanghai, China, March 2016.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuya Baba, Yusuke Tatesumi, Keiichiro Shirai, Masahiro Okuda, “An Automatic Yearbook Style Photo Generation Method using Color Grading and Guide Image Filtering based Facial Skin Color Correction,” IAPR Asian Conference on Pattern Recognition (ACPR), pp. 504-508, Kuala Lumpur, Malaysia, November 2015.</p></li>
+<li class="publication-item"><p class="publication-text">Yusuke Shirahashi, Ryo Matsuoka, Masahiro Okuda, “Reflectance Estimation Using Multiple Exposure Images,” IEEE Global Conference on Consumer Electronics (GCCE), pp. 324-325, Osaka, October 2015.</p></li>
+<li class="publication-item"><p class="publication-text">Masao Yamagishi, Seisuke Kyochi, Keiichiro Shirai, Masahiro Okuda, "Regularization Approach for Bayer Reconstruction in Lossy Image Coding by Inverse Demosaicing," IEEE International Conference on Image Processing (ICIP), COM-P2.2, pp. 334-338, Québec September 2015.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tatsuya Baba, Masahiro Okuda, "Multiple Exposure Integration for Restoring All In-Focus Images," IEEE International Conference on Image Processing (ICIP), TEC-P6.5, pp. 4165-4169, Québec, September 2015.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tatsuya Baba, Masahiro Okuda, "Reflectance Estimation and White Balancing Using Multiple Images," IEEE International Conference on Image Processing (ICIP), ELI-P3.3, pp. 1562-1570, Québec, September 2015.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tatsuya Baba, Masahiro Okuda, “Constrained Design of FIR Filters with Sparse Coefficients,” Asia-Pacific Signal Processing Association Annual Summit and Conference (APSIPA), FP-P1-1084, pp. 1-4, Angkor Wat, December 9-12, 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Masahiro Okuda, “FFT based Solution for Multivariable l2 Equations using KKT System via FFT and Efficient Pixel-wise Inverse Calculation,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), SPTM-P7.6, pp. 2629-2633, Florence, May 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Yusuke Tatesumi, Keisuke Iwata, Keiichiro Shirai, Masahiro Okuda, “Color Transform between Image Pair using Covariance Correspondences of Local Color Distributions,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IVMSP-P3.10, pp. 1210-1214, Florence, May 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Kuroiwa, Ryo Matsuoka, Seisuke Kyochi, Keiichiro Shirai, Masahiro Okuda, "Lossless/Near-Lossless Color Image Coding by Inverse Demosaicing," IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IVMSP-P5.9, pp. 2011-2014, Florence, May 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Tatsuya Baba, Ryo Matsuoka, Shunsuke Ono, Keiichiro Shirai, Masahiro Okuda, "Flash/No-flash Image Integration Using Convex Optimization,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IVMSP-P3, pp. 1185-1189, Florence, May 2014.</p></li>
+<li class="publication-item"><p class="publication-text">Tomohiro Yamauchi, Ryo Matsuoka, Masahiro Okuda, “Design of FIR Filters with Decimated Impulse Responses,” APSIPA Annual Summit and Conference, OS.23-SPS.3: Paper #321, Kaohsiung, October 2013.</p></li>
+<li class="publication-item"><p class="publication-text">Hisakazu Kikuchi, Taiyo Deguchi, Masahiro Okuda, “Lossless Compression of LogLuv32 HDR Images by Simple Bitplane Coding,” 30th PCS, San Jose, pp. 265-268, December 8-10, 2013.</p></li>
+<li class="publication-item"><p class="publication-text">Hisakazu Kikuchi, Taiyo Deguchi, Kazuma Shinoda, Masahiro Okuda, “Compression of High Dynamic Range Images in the yu'v' Color Space,” Proceedings of 2013 International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), Yeosu, Korea, pp. 631-634, June 30-July 3, 2013.</p></li>
+<li class="publication-item"><p class="publication-text">Keisuke Iwata, Keiichiro Shirai, Masahiro Okuda, “Local Color Distribution Projection Filtering Using a Homogeneous Coordinate System,” IEEE International Conference on Image Processing (ICIP), WA.PD.6 Paper #245, pp. 2274-2278, Melbourne, Australia, September 2013.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tomohiro Yamauchi, Tatsuya Baba, Masahiro Okuda “Weight Optimization for Multiple Image Integration,” IEEE International Conference on Image Processing (ICIP), WP.L2.7 Paper #1899, pp. 795-799, Melbourne, Australia, September 2013 (Excellent Student Award of the IEEE Fukuoka Section).</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Tatsuya Baba, Masahiro Okuda, Keiichiro Shirai, “High Dynamic Range Image Acquisition Using Flash Image,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IVMSP-P1.13 Paper #3695, pp. 1612-1616, Vancouver, May, 2013.</p></li>
+<li class="publication-item"><p class="publication-text">Takuya Fujiki, Nicola Adami, Takao Jinno, Masahiro Okuda, “High Dynamic Range Image Compression using Base Map Coding,” Asia-Pacific Signal &amp; Information Processing Association Annual Summit and Conference (APSIPA), pp. 1-4, Hollywood, December 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Hiroya Watanabe, Masahiro Okuda, “High Contrast Tone-mapping and its Application for Two-layer High Dynamic Range Coding,” Asia-Pacific Signal &amp; Information Processing Association Annual Summit and Conference (APSIPA), pp. 1-4, Hollywood, December 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Ryo Matsuoka, Takao Jinno, Masahiro Okuda, “Multiple Exposure Integration with Image Denoising,” Signal &amp; Information Processing Association Annual Summit and Conference (APSIPA), 2012 Asia-Pacific, pp. 1-4, Hollywood, December 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Masahiro Okuda, Masaaki Ikehara “Color-line Vector Field and Local Color Component Decomposition for Smoothing and Denoising of Color Images,” 21st International Conference on Pattern Recognition (ICPR), pp. 3050-3053, Tsukuba, November 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Masahiro Okuda, Takao Jinno, Masayuki Okamoto, Masaaki Ikehara, “Local Covariance Filtering for Color Images,” Asian Conference on Computer Vision (ACCV) (ACCV), pp. 406-417, Daejeon Korea, November 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Hiroya Watanabe, Takao Jinno, Masahiro Okuda, “Some Advance on High Contrast Tone Mapping and Application to Two Layer Coding”, ITC-CSCC, Sapporo, July 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Ayaka Yokoo, Masahiro Okuda, “Designing Eigen Kernel for Deblurring,” ITC-CSCC, Sapporo, July 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, Nicola Adami, “New Local Tone Mapping and Two-Layer Coding for HDR Images,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Paper code:IVMSP-L1.1, pp. 765-768, Kyoto, March 2012.</p></li>
+<li class="publication-item"><p class="publication-text">Xinwei Xue, Masahiro Okuda, Satoshi Goto, “µ-Law Based Watermarking for HDR Image Robust to Tone Mapping,” Special Section on State of the Art in High Dynamic Range Image Processing, PID:199, Asia-Pacific Signal and Information Processing Association (APSIPA) Annual Summit and Conference, Xi’an October 2011.</p></li>
+<li class="publication-item"><p class="publication-text">Alberto Boschetti, Nicola Adami, Riccardo Leonardi, and Masahiro Okuda, “Image coding with face descriptors embedding,” IEEE International Conference on Image Processing (ICIP), pp. 3665-3668, Brussels, September 2011.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, Nicola Adami, “Detail Preserving Multiple Bit-Depth Image Representation and Coding,” IEEE International Conference on Image Processing (ICIP), pp. 1533-1536, Brussels, September 2011.</p></li>
+<li class="publication-item"><p class="publication-text">Alberto Boschetti, Nicola Adami, Riccardo Leonardi, Masahiro Okuda, “An Optimal Video-Surveillance Approach for HDR Videos Tone Mapping,” 19th European Signal Processing Conference (EUSIPCO), pp. 274-277, Barcelona, September 2011.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, “Advanced Weighting Scheme in the Rational Remez Algorithm for IIR Digital Filters,” International Symposium on Communications and Information Technologies (ISCIT) ThA1-1-1, Tokyo, October 2010.</p></li>
+<li class="publication-item"><p class="publication-text">Yukihiro Bandoh, Guoping Qiu, Masahiro Okuda, Scott Daly, Til Aach, Oscar Au, “Recent Advances in High Dynamic Range Imaging Technology,” IEEE International Conference on Image Processing (ICIP), pp. 3125-3128, Hong Kong, September 2010.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Kazuya Mouri, Masahiro Okuda, “HDR Video Tone Mapping based on Gamma Blending,” IEEE International Conference on Image Processing (ICIP), pp. 2521-2524, Hong Kong, September 2010.</p></li>
+<li class="publication-item"><p class="publication-text">Alberto Boschetti, Nicola Adami, Riccardo Leonardi, Masahiro Okuda, “Flexible and Effective High Dynamic Range Image Coding,” IEEE International Conference on Image Processing (ICIP), pp. 3145-3148, Hong Kong, September 2010.</p></li>
+<li class="publication-item"><p class="publication-text">Alberto Boschetti, Nicola Adami, Riccardo Leonardi, Masahiro Okuda, “High Dynamic Range Image Tone Mapping Based on Local Histogram Equalization,” International Conference on Multimedia and Expo, (ICME), pp. 1130-1135, Singapore, July 2010.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “A Compact Format for Coding of Texture in 3D Urban Models,” International Conference on Image Processing (ICIP), Paper code: MP.PI.1, pp. 2801-2804, Cairo November 2009.</p></li>
+<li class="publication-item"><p class="publication-text">Nagisa Sugiyama, Hironori Kaida, Xinwei Xue, Takao Jinno, Nicola Adami, Masahiro Okuda, “HDR Image Compression Using Optimized Tone Mapping Model,” IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), IMDSP-P4.3, pp. 1001-1004, Taipei, April 2009.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, “Motion Blur Free HDR Image Acquisition using Multiple Exposures,” International Conference on Image Processing (ICIP), Paper code: TA.PA.2, pp. 1304-1307, San Diego, October 2008. (Excellent Student Award of the IEEE Fukuoka Section受賞).</p></li>
+<li class="publication-item"><p class="publication-text">Satoshi Ueno, Hiroyuki Inatsuka, Makoto Uchino, Masahiro Okuda, “Texture Classification and Resolution Control for 3D Urban Map,” International Conference on Image Processing (ICIP), Paper code: MP.PD.5, pp. 937-940, San Diego, October 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Fabrizio Guerrini, Masahiro Okuda, Nicola Adami, Riccardo Leonardi, “High dynamic Range Image Watermarking,” The 23 rd International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), G6-3, pp. 949-952, Shimonoseki, July 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Nagisa Sugiyama, Masahiro Okuda, “A Study on VQ based Compression of High Dynamic Range Images,” The 23 rd International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), F5-4, pp. 649-652, Shimonoseki, July 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Xinwei Xue, Masahiro Okuda, “The predictive Coding for Geometry Images of 3D Models based on Error Sensitivity,” The 23 rd International Technical Conference on Circuits/Systems, Computers and Communications (ITC-CSCC), F5-3, pp. 645-648, Shimonoseki, July 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Masahiro Okuda, “An Image Fusion Technique for High Dynamic Range Image Acquisition,” Pan-Pacific Imaging Conference ’08, pp. 290-293, Tokyo, June 2008.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Nicola Adami, “Effective Color Space Representation for Wavelet Based Compression of HDR Images,” International Conference on Image Analysis and Processing, (ICIAP), pp. 388-392, Modena, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Takao Jinno, Nicola Adami, Masahiro Okuda, “Acquisition and Encoding of High Dynamic Range Images using Inverse Tone Mapping,” International Conference on Image Processing (ICIP), TP-L6.6, pp. 181-184, San Antonio, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Takanori Uchida, Masaharu Kajitani, Masahiro Okuda, “Point Cloud Reconstruction and Rendering for Real Time 3D Imaging,” International Symposium on Information and Computer Elements (ISICE), Fukuoka, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Hironori Kaida, Yuzuru Yoshitake, Masahiro Okuda, “Pre-Processing for Wavelet Based High Dynamic Range Image Compression,” International Symposium on Information and Computer Elements (ISICE), Fukuoka, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Mitsuhiro Ota, Yuko Iwamaru, Masahiro Okuda, “Positioning Method of 3D Maps Based on Texture Retrieval,” International Symposium on Information and Computer Elements (ISICE) Fukuoka, September 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, “Watermarking for Progressive Human Motion Animation,” International Conference on Multimedia and Expo (ICME), W-P13.10, pp. 1259-1262, Beijing, July 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Nicola Adami, “Raw Image Encoding Based on Polynomial Approximation,” International Conference on Acoustics, Speech and Signal Processing (ICASSP), Paper # IMDSP-P9.8, pp. 1049-1052, Hawaii, April 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Shin-ichiro Takahashi, Ishtiaq Rasool Khan, Masahiro Okuda, Masaaki Ikehara, “Real Time 3D Avatar Transmission Using Cylinder Mapping,” International Conference on Acoustics, Speech and Signal Processing (ICASSP), Paper # IMDSP-L1.4, pp. 473-476, Honolulu, April 2007.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Texture Simplification in 3D Maps for Visualization at Low Resolution,” IEEE International Symposium on Intelligent Signal Processing and Communication System (ISPACS), Paper # WAM1-1-6, pp. 21-24, Yonago, December 2006.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Takanori Ito, Masahiro Okuda, Masaaki Ikehara, “Area-distribution Uniformizing Parameterization for Preserving Features of 3D Meshes,” Paper # M1-5, 12th Digital Signal Processing Workshop, pp. 23-28, Wyoming, September 2006.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “New Designs of MAXFLAT FIR Halfband Low/High Pass Digital Filters with Narrow Transition Bands,” International Conference on Acoustics, Speech and Signal Processing (ICASSP), Paper code: DISPS-P2.7, Toulouse, May 2006.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Multiresolution Modeling of 3D Maps,” IEEE International Workshop on Multimedia Signal Processing (MMSP), pp. 1-4, Shanghai October 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, “Simplification of Texture in 3D Urban Models Using the Hough Transform,” The Fifth IASTED International Conference on Visualization, Imaging, &amp; Image Processing VIIP, pp. 7-11, Benidorm Spain, September 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, Shin-ichi Takahashi, “Embedded Key-frame Extraction for CG Animation by Frame Decimation,” International Conference on Multimedia and Expo (ICME), pp. 1404-1407, Amsterdam, July 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, Shin-ichi Takahashi, “Improved Kinematics Based Motion Compression for Human Figure Animation,” International Conference on Communications, Circuits and Systems (ICCCAS), #BMSP-05.O, Vol. 2, Hongkong, May 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Rhoji Oba, “Digital Differentiators for Narrow Band Applications in the Lower to Midband Range,” IEEE International Symposium on Circuits and Systems 2005, (ISCAS) Session No. B4L-L, pp. 3721-3724, Kobe, May 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, Shin-ichi Takahashi, “Kinematics Based Motion Compression for Human Figure Animation,” International Conference on Acoustics, Speech, and Signal Processing (ICASSP), pp.II-1077-1080, Philadelphia, March 2005.</p></li>
+<li class="publication-item"><p class="publication-text">Keiichiro Shirai, Masaaki Ikehara, Masahiro Okuda, “Fast Regular Mesh Approximation of 3D Models by Cylindrical Mapping,” IEEE International Symposium on Communications and Information Technologies (ISCIT), 28PM2F-７, pp. 861-866, Sapporo, April 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Rhoji Oba, “New Design of FIR Digital Differentiators Having Maximally Linearity at Middle of the Frequency Band,” IEEE International Symposium on Communications and Information Technologies (ISCIT), 27PM1C-2, pp. 178-183, Sapporo, April 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Taito Osabe, Keiichiro Shirai, Toshiyuki Uto, Masahiro Okuda, Masaaki Ikehara, “A Study on Joint Progressive Coding of Range Data and Texture Images,” IEEE International Symposium on Communications and Information Technologies (ISCIT), 28PM2F-3, pp. 845-848, Sapporo, April 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Toshiyuki Uto, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Range Image Registration Using Multiresolution Decomposition,” IEEE International Workshop on Multimedia Signal Processing, Session#:PT2, PP.235-238, Siena, September 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Ryoji Ohba, “MAXACC FIR Digital Differentiators of Higher Degrees,” SICE (Society of Instrumentation and Control Engineers) Annual Conference, pp. 2449-2452, Sapporo, August 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Ryoji Ohba, “Higher Degree Fir Digital Differentiators based on Taylor Series,” IEEE Midwest Symposium on Circuits and Systems, pp.II-57-60, Hiroshima, July 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Masahiro Okuda, Shin-ichi Takahashi, “Hierarchical Human Motion Compression with Constraints on Frames,” IEEE Midwest Symposium on Circuits and Systems, pp.I-253-256, Hiroshima, July, 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Shin-ichi Takahashi, “Regular 3D Mesh Reconstruction Based on Cylindrical Mapping,” IEEE International Conference on Multimedia and Expo (ICME), TP1-6-2, pp. 133-136, Taipei, June, 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Kyoko Nagatomo, Masaaki Ikehara, S. Takahashi, “Similarity Detection of 3D Meshes Using 2D Hierarchical Regular Grids,” IEEE International Conference on Multimedia and Expo, TP1-6-5, pp. 145-148, Taipei, June 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Shiyu Li, Ishtiaq Rasool Khan, Masahiro Okuda, Yasushi Yamazaki, Shin-ichi Takahashi,” Eigen-model Based 3D Model Recognition from Cylindrical Mapped Image,” 2004 International Conference on Communications, Circuits and Systems, pp. 979-983, Chengdu, June 2004.</p></li>
+<li class="publication-item"><p class="publication-text">Ishtiaq Rasool Khan, Masahiro Okuda, Ryoji Ohba, "New Designs of Frequency-Selective FIR Digital Filters," IEEE International Symposium on Circuits and Systems, IEEE International Conference on Circuits and Systems (ISCAS), Paper ID# 1634, Bangkok, May 2003.</p></li>
+<li class="publication-item"><p class="publication-text">K. Nagatomo, D. Yoshikai, M. Okuda, M. Ikehara, S. Takahashi, “Progressive Coding of Textured 3D Models,” IEEE International Conference on Multimedia and Expo (ICME), pp. 357-360, Lausanne, Switzerland, August 2002.</p></li>
+<li class="publication-item"><p class="publication-text">T. Uto, M. Ikehara, M. Okuda, “Wavelet Packet Algorithm for Quadtree-based Embedded Image Coding,” IEEE International Conference on Acoustics, Speech and Signal Processing, (ICASSP) Paper ID# 1992, pp. 3517-3520, Orlando, May 2002.</p></li>
+<li class="publication-item"><p class="publication-text">Kohji Inagaki, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Measuring Error on 3D Meshes Using Pixel Division,” 2001 IEEE International Workshop on Multimedia Signal Processing, pp. 281-286, Canne, France, October 2001.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Tsuhan Chen, "Joint Geometry/Texture Progressive Coding of 3D Models," IEEE International Conference on Image Processing (ICIP), WP05-2014, pp. 632-635, Vancouver, September 2000.</p></li>
+<li class="publication-item"><p class="publication-text">Tomoko Takahara, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “A New Resolution Progressive Coding Scheme using a Sorting Algorithm,” IEEE International Conference on Image Processing, (ICIP), pp. 198-201, Vancouver, September 2000.</p></li>
+<li class="publication-item"><p class="publication-text">Masaaki Ikehara, Masahiro Okuda, Kageyuki Kiyose, Shin-ichi Takahashi, "Complex Approximation for FIR Filters with Equiripple Magnitude and Phase Response," IEEE International Symposium on Circuits and Systems, (ISCAS), pp. 73-76, Geneva, May 2000.</p></li>
+<li class="publication-item"><p class="publication-text">Yutaka Kohno, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi "Lossless Coding using IIR Filter Banks," IEEE International Symposium on Intelligent Signal Processing and Communication Systems, Phuket, November 1999.</p></li>
+<li class="publication-item"><p class="publication-text">Toshiyuki Uto, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Image Coding using Wavelets based on Two-channel Linear Phase Orthogonal IIR Filter Banks,” IEEE International Conference on Image Processing, (ICIP), pp. 265-268, Kobe, October 1999.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Sanjit K. Mitra, Masaaki Ikehara, Shin-ichi Takahashi, “Time-varying Wavelet Transforms with Lifting Steps for Lossless Image Compression,” IEEE International Conference on Image Processing, (ICIP), pp. 48-52, Kobe, October 1999.</p></li>
+<li class="publication-item"><p class="publication-text">Kota Fukutomi, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Cosine-modulated Biorthogonal IIR Filter Banks,” European Conference on Circuits Theory and Design, ECCTD'99, pp1315-1318, Stresa, September 1999.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Kageyuki Kiyose, Masaaki Ikehara, Shin-ichi Takahashi, “Design of Linear Phase FIR Filters using the Nonuniform DCT,” IEEE International Symposium on Circuits and Systems, (ISCAS), Vol. 5.6, pp. 371-374, Monterey, June 1998.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Design of IIR Eigenfilters,” IEEE Pacific Rim Conference on Communications, Computers and Signal Processing, pp. 161-164, Victoria, August 1997.</p></li>
+<li class="publication-item"><p class="publication-text">Hiroyuki Oka, Kageyuki Kiyose, Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Quasi-equiripple Approximation for FIR Filters in the Complex Domain,” IEEE Pacific Rim Conference on Communications, Computers and Signal Processing, pp. 169-172, Victoria, August 1997.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Fast Least Squares Algorithm for Linear Phase FIR filters,” IEEE International Symposium on Circuits and Systems, (ISCAS), pp. 2248-2251, HongKong, June 1997.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Takeshi Fukuoka, Masaaki Ikehara, Shin-ichi Takahashi, “Design of Causal IIR Filter Banks Satisfying Perfect Reconstruction,” IEEE International Symposium on Circuits and Systems, (ISCAS), pp. 2433-2436, HongKong, June 1997.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Complex Approximation of 2-D Digital Filters with Prescribed Log Magnitude and Phase Response,” IEEE Region Ten Conference, pp. 388-393, Perth, November 1996.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Design of Nearly Linear Phase IIR Digital Filters with Prescribed Log Magnitude Response,” IEEE Midwest Symposium on Circuits and Systems, Iowa, pp. 631-634, August 1996.</p></li>
+<li class="publication-item"><p class="publication-text">Kojiro Matsuyama, Masahiro Okuda, Masaaki Ikehara, “Approximation of Group Delay Response Using Weighted Least Squares Method,” IEEE International Symposium on Circuits and Systems, (ISCAS), pp. 197-200, Atlanta, May 1996.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Masaaki Ikehara, Shin-ichi Takahashi, “Complex Approximation for IIR Digital Filters Based on Remez-Type Algorithm,” IEEE International Conference on Digital Signal Processing, DSP'95, pp. 938-943, Cyprus, June 1995.</p></li>
+<li class="publication-item"><p class="publication-text">Masahiro Okuda, Shin-ichi Takahashi, “Design Methods for IIR Digital Filters with Complex Coefficients,” JTC-CSCC '94, D1-6, Korea, July 1994.</p></li>
+</ul></main></body>
+</html>
