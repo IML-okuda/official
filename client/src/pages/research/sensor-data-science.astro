@@ -1,16 +1,16 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: センサー×データサイエンス / Sensor-and-Data-Science
-// tags: ["誘電率センサ", "ハイパースペクトル", "非破壊計測"]
+// title: センシング・医用画像×データサイエンス / Sensing-Medical-Imaging-and-Data-Science
+// tags: ["誘電率センサ", "ハイパースペクトル", "WiFi CSI", "医用画像", "Radiomics"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
 
-<ResearchTopicLayout title={"センサー×データサイエンス"}>
-    <h1 class="title">センサー×データサイエンス</h1>
+<ResearchTopicLayout title={"センシング・医用画像×データサイエンス"}>
+    <h1 class="title">センシング・医用画像×データサイエンス</h1>
     <div class="research-body">
         <p>
-            計測の現場で本当に使えるAIをつくるには，データを解析する技術だけでなく，<strong>データを生み出すセンサそのもの</strong>から設計できることが強みになります．私たちは，自作の誘電率センサやハイパースペクトルカメラなどの計測技術とAIを統合し，水分量や成分比，劣化・異常といった物性・状態の微小な変化を<strong>非破壊で高精度に推定</strong>する研究に取り組んでいます．センサ設計・特徴抽出・モデル化までを一貫して手がけ，農業・建材・環境計測への展開を図っています．
+            誘電率・スペクトル・電波，そしてMRI・CT・X線——実世界を捉えた計測データには，見た目だけでは分からない豊富な情報が眠っています．私たちは，<strong>センサそのものの設計からデータの解析・モデル化まで</strong>を一貫して手がけ，物性・状態の非破壊推定から医療の診断支援まで，農業・建材・環境・医療にわたる幅広い応用に取り組んでいます．
         </p>
     </div>
 
@@ -47,6 +47,31 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
             WiFiの電波が伝わる際のチャネル状態情報（CSI）は，空間内の人の動きに応じて変化します．この性質を利用し，<strong>カメラを使わずに電波の変化から人の動作を認識する</strong>研究に取り組んでいます．映像を撮影しないためプライバシーに配慮でき，照明条件や遮蔽物の影響も受けにくいことから，屋内の見守りや行動理解への応用が期待されます．
         </p>
     </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">Radiomics — 医用画像から情報を掘り起こす</h2>
+        <p>
+            MRIやCT画像などの高次元データは内部に豊富な情報が包含されていますが，その情報を抽出するのはチャレンジングな問題です．
+            医療画像から様々な特徴量を抽出して，画像診断に応用する技術は<strong>Radiomics</strong>と呼ばれ，近年注目を集めています．
+            本研究室では，スパースコーディングや深層学習技術をRadiomicsに応用し，画像高精細化による診断精度の向上や脳腫瘍患者の術後生存期間予測に取り組んでいます．
+        </p>
+    </div>
+    <Fig src={"/fig/radiomics.png"} caption={""} width={500} />
+
+    <div class="research-body">
+        <h2 class="sub-title">歯科パノラマX線からの動脈硬化検出</h2>
+        <p>
+            歯科パノラマX線に写る頸動脈の石灰化をAIで自動検出し，脳卒中などの重症化予防と医科受診の早期化に役立てる研究です．
+            歯科で撮影済み画像の二次活用により，日常診療での早期スクリーニングへの実装を目指します．
+            医用画像で常に課題となる学習データの少なさに対しては，画像生成技術によるデータ拡張などを取り入れ，<strong>少ないデータでも高精度な検出</strong>を達成できることが特徴です．（関西大学・画像処理工学研究室と松本歯科大学との共同研究）
+        </p>
+        <ul>
+            <li>Sota Nakano, Kazuki Iwasaki, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A New Detector of Calcification Regions in Dental Panoramic Radiographs," <em>IEICE Transactions on Fundamentals</em>, Vol. 109-A, No. 6, June 2026. <a href="https://doi.org/10.1587/transfun.2025SML0004">DOI: 10.1587/transfun.2025SML0004</a></li>
+            <li>Sota Nakano, Naruki Tochihara, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A Data Augmentation Method using Pix2Pix for Calcification Region Detection from Dental Panoramic Radiographs," International Workshop on Smart Info-Media Systems in Asia (SISA), pp. 86-90, November 2025. <a href="https://doi.org/10.34385/proc.96.RS2-04">DOI: 10.34385/proc.96.RS2-04</a></li>
+        </ul>
+    </div>
+    <Fig src={"/fig/medical-dental-imaging-1.png"} caption={"出典PDFより抜粋"} />
+    <p class="fig-src"><a href="https://shingi.jst.go.jp/pdf/2023/2023_10kansai_001.pdf" target="_blank" rel="noopener">出典PDF:深層学習を用いた歯科パノラマX線写真からの動脈硬化検出</a></p>
 
     <div class="research-body">
         <h2 class="sub-title">その他の展開</h2>
@@ -156,5 +181,12 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
         color: var(--cap-color);
         text-align: center;
         line-height: 1.6;
+    }
+
+    .fig-src {
+        margin-top: .25rem;
+        font-size: .85rem;
+        text-align: center;
+        opacity: .8;
     }
 </style>

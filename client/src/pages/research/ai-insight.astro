@@ -1,22 +1,23 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 潜在的思考や暗黙知を表出するAI / AI-that-elicits-latent-thinking-and-tacit-knowledge
-// tags: ["生成AI", "対話システム", "暗黙知", "意思決定支援"]
+// title: 潜在的思考・主観・感性を定量化するAI / AI-that-quantifies-latent-thinking-subjectivity-and-sensibility
+// tags: ["生成AI", "対話システム", "暗黙知", "色彩解析", "感性情報処理"]
+import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
 
-<ResearchTopicLayout title={"潜在的思考や暗黙知を表出するAI"}>
-    <h1 class="title">潜在的思考や暗黙知を表出するAI</h1>
+<ResearchTopicLayout title={"潜在的思考・主観・感性を定量化するAI"}>
+    <h1 class="title">潜在的思考・主観・感性を定量化するAI</h1>
     <div class="research-body">
         <p>
-            人の頭の中にある知識の多くは，言葉として表に出てきません．熟練者の勘やコツ，経験に根ざしたノウハウ，本人すら自覚していない判断の前提——こうした<strong>「暗黙知」や「潜在的思考」</strong>は，マニュアルにも議事録にも残らないまま，組織や個人の中に埋もれています．私たちは，専門家の対話術を模倣する生成AIとの対話を通じて，表出されにくいこれらの思考を丁寧に掘り起こす仕組みを探究しています．
+            熟練者の勘やコツ，本人すら自覚していない判断の前提，「色づかいが似ている」「なんとなく落ち着いた雰囲気だ」という直感——人の頭の中にあるこうした<strong>言語化しにくい知識や感覚</strong>は，マニュアルにも数値にも残らないまま埋もれています．私たちは，対話AIと画像解析という二つのアプローチから，<strong>潜在的思考・主観・感性をデータとして扱えるようにする</strong>研究に取り組んでいます．
         </p>
     </div>
 
     <div class="research-body">
         <h2 class="sub-title">専門家の「問いかけの技術」をAIに組み込む</h2>
         <p>
-            優れたインタビュアーやファシリテーターは，相手の思考を引き出すために，質問を投げかける順序を工夫し，あえて反対の立場から問い直し，分かりにくい概念を比喩に置き換えます．本研究では，こうした<strong>質問の順序化・比喩生成・反証の誘導・疑問解決といった対話の方略をモデル化</strong>し，LLM（大規模言語モデル）が対話の文脈に応じて適切な方略を選択できるようにします．場当たり的な質問応答ではなく，専門家の思考探索術に裏打ちされた対話によって，人の潜在的思考を段階的に表出させ，<strong>根拠とともに可視化する</strong>ことを目指します．
+            優れたインタビュアーやファシリテーターは，相手の思考を引き出すために，質問を投げかける順序を工夫し，あえて反対の立場から問い直し，分かりにくい概念を比喩に置き換えます．本研究では，こうした<strong>質問の順序化・比喩生成・反証の誘導・疑問解決といった対話の方略をモデル化</strong>し，LLM（大規模言語モデル）が対話の文脈に応じて適切な方略を選択できるようにします．場当たり的な質問応答ではなく，専門家の思考探索術に裏打ちされた対話によって，人の潜在的思考を段階的に表出させ，<strong>根拠とともに可視化する</strong>ことを目指します．ニーズ発掘，学習者のリフレクション支援，意思決定会議のファシリテーション，熟練者の暗黙知の継承など，幅広い応用を想定しています．
         </p>
     </div>
 
@@ -33,16 +34,29 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     <img src="/fig/ai-insight-1.png" class="fig-card" />
 
     <div class="research-body">
-        <h2 class="sub-title">想定される応用</h2>
-        <ul>
-            <li><strong>ニーズ発掘：</strong>顧客自身も言語化できていない要望を対話から引き出す</li>
-            <li><strong>教育・学習支援：</strong>学習者のリフレクション（振り返り）を促し，思考の質を高める</li>
-            <li><strong>研究計画レビュー：</strong>計画に潜む暗黙の前提や見落としを問いかけによって顕在化する</li>
-            <li><strong>意思決定支援：</strong>組織の意思決定会議をファシリテーションし，合意形成を効率化する</li>
-            <li><strong>技能伝承：</strong>熟練者の暗黙知を対話を通じて記録し，次世代へ継承する</li>
-        </ul>
+        <h2 class="sub-title">色彩の定量化</h2>
         <p>
-            教育と意思決定支援への適用を通じて，思考の質の向上と合意形成の効率化を目指しています．
+            AIは形状や模様の特徴を把握するのは得意な反面，色の差異を識別するのはあまり得意ではありません．
+            また，人間は二つの画像を見比べて，色彩の構成が類似しているか否かを直感的に判断することが可能ですが，これもまたAIにとってみれば難しいタスクなのです．
+            我々は<strong>色構成をグラフ構造で表現し，機械学習手法を適用する</strong>ことで，色彩の分布や相対的な位置関係を考慮した色彩構成の類似度を算出する，新たな手法を開発しました．
+            この手法は，従来の手法では捉えきれなかった色彩構成の類似度をより精緻に評価することが可能となり，色づかいを手がかりとした画像検索やデザイン支援への応用が期待できます．
+        </p>
+        <p>
+            色彩を定量的に扱う技術は，色を「変換・補正」する応用にもつながります．基準となる画像の色分布に合わせて別の画像の色を変換する手法や，顔の肌色を自然に補正する手法など，<strong>人の見た目の自然さを保ったまま色を制御する</strong>研究も行ってきました．
+        </p>
+        <ul>
+            <li>Keiichiro Shirai, Tatsuya Baba, Shunsuke Ono, Masahiro Okuda, Yusuke Tatesumi, Paul Perrotin, "Guided Facial Skin Color Correction," <em>Signals</em>, Vol. 2, No. 3, pp. 540-558, 2021. <a href="https://doi.org/10.3390/signals2030033">DOI: 10.3390/signals2030033</a></li>
+            <li>Ryo Matsuoka, Keiichiro Shirai, Masahiro Okuda, "Reference-based Local Color Distribution Transformation Method and its Application to Image Integration," <em>Signal Processing: Image Communication</em>, Vol. 76, pp. 231-242, August 2019. <a href="https://doi.org/10.1016/j.image.2019.04.020">DOI: 10.1016/j.image.2019.04.020</a></li>
+        </ul>
+    </div>
+    <Fig src={"/fig/color-similarity.png"} caption={"色構成による画像検索の例"} />
+
+    <div class="research-body">
+        <h2 class="sub-title">主観の定量化</h2>
+        <p>
+            これまでの画像分類は，画像に，車，イヌ，などのラベルをつけて，画像とラベルの関係を学習することで，分類を可能にしていました．
+            しかし，この方法ではその画像の持つ「雰囲気」やそのシーンがもつ「状況」などの，<strong>ラベルで表現することが難しい分類タスク</strong>に適用することはできません．
+            我々はこのような曖昧で直接ラベル付けが困難な画像分類を可能にする手法を研究しています．人の主観的な感じ方をデータとして学習に取り込むことで，従来にはない，新しい観点の画像検索や推薦が可能になります．
         </p>
     </div>
 </ResearchTopicLayout>
@@ -64,6 +78,12 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
         border-radius: 2px;
     }
 
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
     .research-body {
         font-size: clamp(16px, 1.6vw, 18px);
         color: #222;
@@ -80,23 +100,35 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     }
 
     .research-body ul {
-        padding-left: 1.25rem;
+        padding-left: 1.2rem;
         padding-right: 1.25rem;
         list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
     }
 
     .research-body li {
         margin-bottom: 0.5rem;
-    }
-
-    .sub-title {
-        margin: 1rem 0 0.5rem;
-        padding-bottom: 0.25rem;
-        border-bottom: 1px solid rgba(0,0,0,.12);
+        line-height: 1.6;
     }
 
     strong {
         font-weight: 600;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:visited {
+        color: #6d1d95;
     }
 
     .fig-card {
