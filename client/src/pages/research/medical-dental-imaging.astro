@@ -1,7 +1,7 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
-// tags: ["高精細画像 AI", "テクスチャ識別"]
+// title: 医歯画像解析 / Medical-and-Dental-Image-Analysis
+// tags: ["医用画像", "Radiomics", "歯科画像"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
@@ -10,21 +10,45 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     <h1 class="title">医歯画像解析</h1>
     <div class="research-body">
         <p>
+            画像処理・機械学習の技術は，医療・歯科の現場に大きな価値をもたらします．私たちは，医学・歯学の研究者との連携のもと，MRI・CT・X線から口腔内カメラまで，<strong>多様な医歯画像を対象とした解析・診断支援</strong>の研究に取り組んでいます．
+        </p>
+    </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">Radiomics — 医用画像から情報を掘り起こす</h2>
+        <p>
             MRIやCT画像などの高次元データは内部に豊富な情報が包含されていますが，その情報を抽出するのはチャレンジングな問題です．
-            医療画像から様々な特徴量を抽出して，画像診断に応用する技術はRadiomicsと呼ばれ，近年注目を集めています．
+            医療画像から様々な特徴量を抽出して，画像診断に応用する技術は<strong>Radiomics</strong>と呼ばれ，近年注目を集めています．
             本研究室では，スパースコーディングや深層学習技術をRadiomicsに応用し，画像高精細化による診断精度の向上や脳腫瘍患者の術後生存期間予測に取り組んでいます．
         </p>
     </div>
     <Fig src={"/fig/radiomics.png"} caption={""} width={500} />
+
     <div class="research-body">
+        <h2 class="sub-title">歯科パノラマX線からの動脈硬化検出</h2>
         <p>
-            また，歯科パノラマX線に写る頸動脈の石灰化をAIで自動検出し，脳卒中などの重症化予防と医科受診の早期化に役立てる研究です．
+            歯科パノラマX線に写る頸動脈の石灰化をAIで自動検出し，脳卒中などの重症化予防と医科受診の早期化に役立てる研究です．
             歯科で撮影済み画像の二次活用により，日常診療での早期スクリーニングへの実装を目指します．
-            学習データが少なくても高精度を達成できることが特徴です．（関西大学・画像処理工学研究室と松本歯科大学との共同研究）
+            医用画像で常に課題となる学習データの少なさに対しては，画像生成技術によるデータ拡張などを取り入れ，<strong>少ないデータでも高精度な検出</strong>を達成できることが特徴です．（関西大学・画像処理工学研究室と松本歯科大学との共同研究）
         </p>
+        <ul>
+            <li>Sota Nakano, Kazuki Iwasaki, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A New Detector of Calcification Regions in Dental Panoramic Radiographs," <em>IEICE Transactions on Fundamentals</em>, Vol. 109-A, No. 6, June 2026. <a href="https://doi.org/10.1587/transfun.2025SML0004">DOI: 10.1587/transfun.2025SML0004</a></li>
+            <li>Sota Nakano, Naruki Tochihara, Mitsuji Muneyasu, Soh Yoshida, Masahiro Okuda, Nanae Dewake, Nobuo Yoshinari, Keiichi Uchida, "A Data Augmentation Method using Pix2Pix for Calcification Region Detection from Dental Panoramic Radiographs," International Workshop on Smart Info-Media Systems in Asia (SISA), pp. 86-90, November 2025. <a href="https://doi.org/10.34385/proc.96.RS2-04">DOI: 10.34385/proc.96.RS2-04</a></li>
+        </ul>
     </div>
     <Fig src={"/fig/medical-dental-imaging-1.png"} caption={"出典PDFより抜粋"} />
     <p class="fig-src"><a href="https://shingi.jst.go.jp/pdf/2023/2023_10kansai_001.pdf" target="_blank" rel="noopener">出典PDF:深層学習を用いた歯科パノラマX線写真からの動脈硬化検出</a></p>
+
+    <div class="research-body">
+        <h2 class="sub-title">口腔内イメージング</h2>
+        <p>
+            歯科臨床の現場に向けたイメージングデバイスの研究にも取り組んできました．口腔内カメラと画像処理を組み合わせた内視鏡システムや，湾曲した根管の根尖部を可視化する根管内視鏡の評価など，<strong>デバイスと画像処理の両面から歯科診療を支援</strong>する研究を歯学研究者と共同で進めてきました．
+        </p>
+        <ul>
+            <li>Masataka Fujimoto, Masahiro Okuda, Shinji Yoshii, Satoshi Ikezawa, Toshitsugu Ueda, Herve Tassery, Frederic Cuisinier, Chiaki Kitamura, "Endoscopic System Based on Intraoral Camera and Image Processing," <em>IEEE Transactions on Biomedical Engineering</em>, Vol. 66, No. 4, pp. 1026-1033, April 2019. <a href="https://doi.org/10.1109/TBME.2018.2866273">DOI: 10.1109/TBME.2018.2866273</a></li>
+            <li>Shinji Yoshii, Masataka Fujimoto, Masahiro Okuda, Chiaki Kitamura, "In Vitro Evaluation of a Novel Root Canal Endoscope for Visualizing the Apex of Curved Root Canal Models and an Extracted Tooth," <em>Journal of Endodontics</em>, Vol. 44, No. 12, pp. 1856-1861, December 2018. <a href="https://doi.org/10.1016/j.joen.2018.08.014">DOI: 10.1016/j.joen.2018.08.014</a></li>
+        </ul>
+    </div>
 </ResearchTopicLayout>
 
 <style>
@@ -45,7 +69,13 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
         border-radius: 2px;
     }
 
-        .research-body {
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
+    .research-body {
         font-size: clamp(16px, 1.6vw, 18px);
         color: #222;
         line-height: 1.8;
@@ -58,6 +88,37 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 
     .research-body p {
         text-indent: 1em;
+    }
+
+    .research-body ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
+    }
+
+    .research-body li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:visited {
+        color: #6d1d95;
     }
 
     .fig-src {

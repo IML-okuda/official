@@ -1,7 +1,7 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
-// tags: ["高精細画像 AI", "テクスチャ識別"]
+// title: センサー×データサイエンス / Sensor-and-Data-Science
+// tags: ["誘電率センサ", "ハイパースペクトル", "非破壊計測"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
@@ -10,23 +10,52 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     <h1 class="title">センサー×データサイエンス</h1>
     <div class="research-body">
         <p>
-            本研究は，自作の誘電率センサやハイパースペクトルセンサなどの計測技術とAIを統合し，物性・状態の高精度推定と時空間可視化を実現します．
-            センサ設計，特徴抽出，モデル化により，水分量や成分比，劣化・異常の微小変化を非破壊で検出し，農業・建材・環境計測への展開を図ります．
+            計測の現場で本当に使えるAIをつくるには，データを解析する技術だけでなく，<strong>データを生み出すセンサそのもの</strong>から設計できることが強みになります．私たちは，自作の誘電率センサやハイパースペクトルカメラなどの計測技術とAIを統合し，水分量や成分比，劣化・異常といった物性・状態の微小な変化を<strong>非破壊で高精度に推定</strong>する研究に取り組んでいます．センサ設計・特徴抽出・モデル化までを一貫して手がけ，農業・建材・環境計測への展開を図っています．
         </p>
-        <h3 class="sub-title">研究事例</h3>
+    </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">誘電率センシング×AI — 土壌を測る</h2>
+        <p>
+            土壌の水分量などの計測に用いられる誘電率センサを自作し，データサイエンスと組み合わせる研究に取り組んでいます．安価な部品で構成できる簡便な計測回路を設計・試作し，誘電率や電気伝導度の計測への応用を進めています．
+        </p>
         <ul>
-            <li>誘電率センサと機械学習を用いた土壌水分量の高精度推定</li>
-            <li>ハイパースペクトルイメージングと深層学習を用いた農作物の成分分析</li>
-            <li>センサネットワークと時系列解析を用いた環境モニタリングと異常検知</li>
+            <li>村岸秋生, 奥田正浩, "<a href="https://ken.ieice.org/ken/paper/20250605GcKy/">土壌計測のための簡便な誘電率計測回路の実現と電気伝導度計測への応用</a>," 電子情報通信学会 信号処理研究会, 信学技報, vol. 125, no. 53, SIP2025-11, pp. 59-64, 2025年6月.</li>
         </ul>
     </div>
     <Fig src={"/fig/sensor-data-science-1.png"} caption={"誘電率センサ"} />
+
+    <div class="research-body">
+        <h2 class="sub-title">ハイパースペクトルイメージング×AI — 見えない情報を読み取る</h2>
+        <p>
+            ハイパースペクトルカメラは，人の目には同じに見えるモノから，波長ごとの細かなスペクトル情報を読み取ることができます．私たちは，この技術と深層学習を組み合わせ，<strong>外観からは区別のつかない素材や成分をスペクトル情報から識別・選別する</strong>研究に取り組んでいます．どの波長帯域が識別の鍵を握るのかをAIの判断根拠の解析によって明らかにし，対象に応じた最適な帯域選択を行うことで，高精度な識別を実現しています．資源循環や農業をはじめ，様々な分野への応用を進めています．
+        </p>
+        <ul>
+            <li>橋口隼, 岩垂大知, 奥田正浩, "<a href="https://www.ieice.org/publications/conferences/summary.php?id=CONF0000152514&expandable=0&ConfCd=2026G&session_num=A-8&lecture_number=A-8-02&year=2026&conf_type=G">可視光域ハイパースペクトル画像を用いた繊維試料の識別</a>," 電子情報通信学会 2026年総合大会, A-8-02, 2026年3月.</li>
+        </ul>
+    </div>
     <figure class="img-figure">
         <div class="img-card">
             <img src="/fig/sensor-data-science-2.png" />
         </div>
         <figcaption class="img-cap">ハイパースペクトルカメラによるスペクトル解析</figcaption>
     </figure>
+
+    <div class="research-body">
+        <h2 class="sub-title">WiFi CSI×AI — 電波で動きを捉える</h2>
+        <p>
+            WiFiの電波が伝わる際のチャネル状態情報（CSI）は，空間内の人の動きに応じて変化します．この性質を利用し，<strong>カメラを使わずに電波の変化から人の動作を認識する</strong>研究に取り組んでいます．映像を撮影しないためプライバシーに配慮でき，照明条件や遮蔽物の影響も受けにくいことから，屋内の見守りや行動理解への応用が期待されます．
+        </p>
+    </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">その他の展開</h2>
+        <ul>
+            <li>誘電率センサと機械学習を用いた土壌水分量の高精度推定</li>
+            <li>ハイパースペクトルイメージングと深層学習を用いた農作物の成分分析</li>
+            <li>センサネットワークと時系列解析を用いた環境モニタリングと異常検知</li>
+        </ul>
+    </div>
 </ResearchTopicLayout>
 
 <style>
@@ -69,15 +98,35 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     }
 
     .research-body ul {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
         padding-left: 1.2rem;
-        margin: 0;
+        padding-right: 1.25rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
     }
 
     .research-body li {
-        margin-bottom: 0.45rem;
+        margin-bottom: 0.5rem;
         line-height: 1.6;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:visited {
+        color: #6d1d95;
     }
 
     .img-card {
@@ -93,12 +142,13 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     }
 
-    .fig-card img {
+    .img-card img {
         display: block;
         max-width: 100%;
         height: auto;
         border-radius: 6px;
     }
+
     .img-cap {
         margin-top: 8px;
         font-size: 0.875rem;

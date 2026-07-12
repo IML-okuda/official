@@ -1,7 +1,7 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
-// tags: ["高精細画像 AI", "テクスチャ識別"]
+// title: AIの癖を読み解く / Understanding-the-habits-of-AI
+// tags: ["ニューラルネットワーク", "敵対的攻撃", "形状・テクスチャバイアス"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 import "@fontsource/noto-sans-jp/700.css";
@@ -11,12 +11,50 @@ import "@fontsource/noto-sans-jp/700.css";
     <h1 class="title">AIの癖を読み解く</h1>
     <div class="research-body">
         <p>
-            AIはどこを重視して物体を認識するのか．<strong>概形？局所的模様？色？</strong>それを明らかにすることでニューラルネットワークの癖を見抜く方法とその評価について研究をしています．
-            また，入力画像に目に見えない少しの揺らぎを与えるだけで，AIの判断を狂わせる事ができます．我々は様々な手法でこのような<span class="accent">ニューラルネットワークの癖を読み解き，システムの安定化，認識精度の向上を達成</span>し，SNS/Webシステム解析や時系列データ予測などの分野に応用しています．
+            AIはどこを重視して物体を認識するのか．<strong>概形？局所的模様？色？</strong>ディープラーニングの構成要素であるニューラルネットワークは，人間とは異なる様々な<strong>“癖”</strong>を持っています．私たちは，この癖を明らかにし，ときには意図的に突くことで，<span class="accent">AIの判断メカニズムを解明し，より安定で信頼できるシステムの実現</span>を目指しています．
         </p>
     </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">AIは何を見ているのか？ — 形状・テクスチャバイアスの解析</h2>
+        <p>
+            畳み込みニューラルネットワークは，物体の大域的な形状よりも局所的な模様（テクスチャ）を手がかりに判断する傾向があることが知られています．私たちは，画像を構造成分とテクスチャ成分に分解する「画像分解」を用いて，モデルがどちらをどれだけ重視しているかという<strong>バイアスを定量化する手法</strong>を開発しました．さらに，このバイアスを意図的に制御して形状重視のモデルを作ることで，転移学習の性能を向上できることを示しています．
+        </p>
+        <ul>
+            <li>Akinori Iwata, Masahiro Okuda, "Quantifying Shape and Texture Biases for Enhancing Transfer Learning in Convolutional Neural Networks," <em>Signals</em>, Vol. 5, No. 4, pp. 721-735, November 2024. <a href="https://doi.org/10.3390/signals5040040">DOI: 10.3390/signals5040040</a></li>
+            <li>Akinori Iwata, Masahiro Okuda, "CNN Pretrained Model with Shape Bias using Image Decomposition," <em>APSIPA Transactions on Signal and Information Processing</em>, Vol. 12, No. 1, 2023. <a href="https://doi.org/10.1561/116.00000113">DOI: 10.1561/116.00000113</a></li>
+            <li>Takito Sawada, Akinori Iwata, Masahiro Okuda, "Quantifying and Inducing Shape Bias in CNNs via Max-Pool Dilation," IIEEJ International Workshop on Image Electronics and Visual Computing (IEVC), March 2026.</li>
+        </ul>
+    </div>
     <Fig src={"/fig/kaeru.png"} caption={"画像分解を用いてニューラルネットワークの“癖”をコントロールすることができる"} width={500} />
+
+    <div class="research-body">
+        <h2 class="sub-title">AIを“騙す”ことで弱点を知る — 敵対的攻撃</h2>
+        <p>
+            入力画像に目に見えないほど小さな揺らぎ（摂動）を与えるだけで，AIの判断を狂わせることができます．こうした「敵対的攻撃（Adversarial Attack）」の研究は，AIの弱点がどこに潜んでいるかを浮き彫りにします．
+        </p>
+        <p>
+            私たちは，SNSの自動画像クロップ機能を狙い，表示される切り抜き領域を意図的に操作する攻撃手法や，数式画像にアタックをかけて数式OCRや大規模視覚言語モデルに誤認識させる攻撃手法を提案してきました．文字のスケルトン（骨格）構造に着目して探索空間を絞り込む手法や，画像の周波数特性に適応して摂動を目立たなくする手法など，攻撃の「質」を高める独自のアプローチを開発しています．
+        </p>
+        <ul>
+            <li>Masatomo Yoshida, Masahiro Okuda, "IFAP: Input-Frequency Adaptive Adversarial Perturbation via Full-Spectrum Envelope Constraint for Spectral Fidelity," <em>IEEE Access</em>, Vol. 13, pp. 217504-217518, December 2025. <a href="https://doi.org/10.1109/ACCESS.2025.3648201">DOI: 10.1109/ACCESS.2025.3648201</a></li>
+            <li>Masatomo Yoshida, Haruto Namura, Masahiro Okuda, "Adversarial Examples for Image Cropping: Gradient-based and Bayesian-optimized Approaches for Effective Adversarial Attack," <em>IEEE Access</em>, pp. 86541-86552, June 2024. <a href="https://doi.org/10.1109/ACCESS.2024.3415356">DOI: 10.1109/ACCESS.2024.3415356</a></li>
+            <li>Haruto Namura, Masatomo Yoshida, Nicola Adami, Masahiro Okuda, "Adversarial Attacks on Text-Recognizable Foundation Models: Optimized Search Space Reduction via Skeletonization," ECCV24 Workshop, EVAL-FoMo 24, Milan Italy, September 2024.</li>
+            <li>Masatomo Yoshida, Masahiro Okuda, "Adversarial Examples for Image Cropping in Social Media," IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), Singapore, May 2022.</li>
+        </ul>
+    </div>
+    <Fig src={"/fig/advcrop_yoshida.png"} caption={"SNSの自動クロップ機能への敵対的攻撃：目に見えない摂動を加えるだけで，表示される切り抜き領域を意図的に操作できる"} width={500} />
     <Fig src={"/fig/adversarial-attack.png"} caption={"数式画像にアタックをかけて数式OCRに誤認識させる"} width={500} />
+
+    <div class="research-body">
+        <h2 class="sub-title">弱点の理解から，堅牢なAIへ</h2>
+        <p>
+            攻撃と防御は表裏一体です．敵対的サンプルの検出・除去による医用X線画像診断の信頼性向上など，癖の理解を防御に活かす研究にも取り組んでいます．私たちは様々な手法で<span class="accent">ニューラルネットワークの癖を読み解き，システムの安定化，認識精度の向上を達成</span>し，SNS/Webシステム解析や時系列データ予測などの分野に応用しています．
+        </p>
+        <ul>
+            <li>Haruto Namura, Tatsuki Itasaka, Masahiro Okuda, "Effects on Selective Removal of Adversarial Examples for Noisy X-ray Images," 5th International Conference on Intelligent Medicine and Image Processing (IMIP), IEEE, 2023.</li>
+        </ul>
+    </div>
 </ResearchTopicLayout>
 
 <style>
@@ -52,11 +90,43 @@ import "@fontsource/noto-sans-jp/700.css";
         text-indent: 1em;
     }
 
+    .sub-title {
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.25rem;
+        border-bottom: 1px solid rgba(0,0,0,.12);
+    }
+
     strong {
         font-weight: 600;
     }
 
     .accent {
         color: #ff5353
+    }
+
+    ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:visited {
+        color: #6d1d95;
     }
 </style>

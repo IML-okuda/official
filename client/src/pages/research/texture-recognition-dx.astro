@@ -11,7 +11,10 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     <div class="research-body">
         <h2 class="sub-title">Fine-grainedテクスチャ基盤モデル</h2>
         <p>
-            私たちは，従来のテクスチャ解析の限界を超える「Fine-grained（細粒度）テクスチャ分類」の研究に取り組んでいます．肉眼では判別が困難な微細な差異を，高度な表現学習によってモデル化．リモートセンシングによる広域地表面解析から，建築資材の品質管理まで，あらゆるドメインに適用可能な革新的な「テクスチャ基盤モデル」の開発を目指します．
+            テクスチャ識別は機械学習の分野で古くから研究されてきましたが，人間でも識別が困難な微細な模様の違いまでを高精度に特定するのは，今なおチャレンジングな問題です．従来のテクスチャ認識研究の多くは「縞模様」「網目状」といった大まかなカテゴリの分類を対象としており，同一カテゴリ内のわずかな差異を見分けることは想定されていませんでした．
+        </p>
+        <p>
+            私たちは，この従来のテクスチャ解析の限界を超える「Fine-grained（細粒度）テクスチャ分類」の研究に取り組んでいます．肉眼では判別が困難な微細な差異を，高度な表現学習によってモデル化．リモートセンシングによる広域地表面解析から，建築資材の品質管理まで，あらゆるドメインに適用可能な革新的な「テクスチャ基盤モデル」の開発を目指します．
         </p>
     </div>
     <figure>
@@ -19,14 +22,49 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
     </figure>
 
     <div class="research-body">
-        <h2 class="sub-title">DX応用</h2>
+        <h2 class="sub-title">テクスチャ認識の基礎研究</h2>
         <p>
-            プロでも判断に迷う，酷似した材料の模様．さらに，太陽光や室内灯など，光の当たり方によってモノの見え方は大きく変わります．この「照明環境の変化」は，AIによる画像認識の精度を著しく低下させる大きな壁でした．
-            私たちはこの課題に対し，独自のアプローチで挑んでいます．多様な撮影環境に左右されない，ロバストな高精度テクスチャ識別システムの開発に成功しました．この技術は，<a href="https://komatsu-coltd.co.jp/">大手企業</a>との共同研究を通じて壁紙識別アプリとしてリリースされ，すでに社会でその価値を証明しています．
+            基盤モデルの構築に向けて，「ニューラルネットワークはテクスチャをどのように捉えているのか」という基礎的な問いにも取り組んでいます．例えば，ニューラルネットワークが物体の「形状」と「テクスチャ」のどちらを手がかりに判断しているかを定量化する研究では，このバイアスを評価・制御することで転移学習の性能を向上できることを示しました．また，テクスチャ分類に有効なネットワークアーキテクチャの分析など，モデル設計の指針となる知見の蓄積を進めています．
+        </p>
+        <ul>
+            <li>Akinori Iwata, Masahiro Okuda, "Quantifying Shape and Texture Biases for Enhancing Transfer Learning in Convolutional Neural Networks," <em>Signals</em>, Vol. 5, No. 4, pp. 721-735, November 2024. <a href="https://doi.org/10.3390/signals5040040">DOI: 10.3390/signals5040040</a></li>
+            <li>Masaki Ito, Daichi Iwadare, Masahiro Okuda, "Considerations on Convolutional Neural Network Architectures Effective for Texture Classification," International Workshop on Advanced Image Technology (IWAIT), January 2026.</li>
+        </ul>
+    </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">DX応用：壁紙識別アプリ「かべぴた」</h2>
+        <p>
+            プロでも判断に迷う，酷似した材料の模様．さらに，太陽光や室内灯など，光の当たり方によってモノの見え方は大きく変わります．撮影時の照明の明るさや角度，色温度が変わるだけで識別精度は顕著に影響を受け，家庭やオフィスで用いられる照明器具が多種多様であることも，実環境での運用を難しくしてきました．この「照明環境の変化」は，AIによる画像認識の精度を著しく低下させる大きな壁でした．
+        </p>
+        <p>
+            私たちはこの課題に対し，独自のアプローチで挑んでいます．多様な撮影環境に左右されない，ロバストな高精度テクスチャ識別システムの開発に成功しました．この技術は，株式会社コマツとの共同研究を通じて壁紙識別アプリ「かべぴた」としてリリースされ，すでに社会でその価値を証明しています．スマートフォンで壁紙を撮影するだけで製品を特定でき，重いサンプル帳を持ち歩いていた建築・内装業界の働き方を変えつつあります．
+        </p>
+        <p>
+            今回は識別対象を壁紙としていますが，微細な模様の識別が求められるフィールドは多様であり，建築資材業界以外の様々な分野への応用も期待されています．
         </p>
     </div>
     <figure>
-        <Fig src={"/fig/kabepita-app.png"} caption={"壁紙識別アプリ「かべぴた」の画面イメージ"} width={300} />
+        <Fig src={"/fig/kabepita.png"} caption={"壁紙識別アプリ「かべぴた」"} width={300} />
+    </figure>
+    <figure>
+        <Fig src={"/fig/kabepita-liaison.png"} caption={"同志社大学ニューズレター LIAISON に共同プロジェクトが掲載されました"} width={500} />
+    </figure>
+
+    <div class="research-body">
+        <h2 class="sub-title">受賞歴</h2>
+        <p>
+            この産学連携プロジェクトの成果は，デザイン・DXの両面から高く評価され，数々の賞を受賞しています．
+        </p>
+        <ul>
+            <li><a href="https://www.doshisha.ac.jp/news/detail/001-US127n.html">グッドデザイン賞（2024年度）</a></li>
+            <li><a href="https://www.soumu.go.jp/soutsu/kinki/topics/01sotsu07_01002275.html">KANSAI DX AWARD 2024 グランプリ</a></li>
+            <li><a href="https://news.livedoor.com/article/detail/28298104/">DXイノベーション大賞2024 優秀賞</a></li>
+            <li><a href="https://www.doshisha.ac.jp/news/detail/001-X8zbZc.html">日本DX大賞2024 ポスターセッション優秀賞</a></li>
+        </ul>
+    </div>
+    <figure>
+            <Fig src={"/fig/texture-recognition-dx-1.png"} caption={"KANSAI DX AWARD グランプリ　授賞式の様子"} width={500} />
     </figure>
     <div class="research-body">
         <h2 class="sub-title">様々なメディアで紹介されました！</h2>
@@ -40,9 +78,6 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
         </ul>
         <p>など多数！</p>
     </div>
-    <figure>
-            <Fig src={"/fig/texture-recognition-dx-1.png"} caption={"Kansai DX Award グランプリ　授賞式の様子"} width={500} />
-    </figure>
 </ResearchTopicLayout>
 
 <style>

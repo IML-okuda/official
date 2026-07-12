@@ -1,32 +1,49 @@
 ---
 // layout: ../../layouts/ResearchTopicLayout.astro
-// title: 高精細テクスチャ識別とDX / High-definition-texture-identification-and-DX
-// tags: ["高精細画像 AI", "テクスチャ識別"]
+// title: 色彩の定量化・主観のデータ化 / Color-Quantification-and-Subjectivity-Data
+// tags: ["色彩解析", "画像検索", "感性情報処理"]
 import Fig from "@/components/Fig.astro";
 import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 ---
 
 <ResearchTopicLayout title={"色彩の定量化・主観のデータ化"}>
     <h1 class="title">色彩の定量化・主観のデータ化</h1>
-        <div class="research-body">
-            <h2 class="sub-title">色彩の定量化</h2>
-            <p>
-                AIは形状や模様の特徴を把握するのは得意な反面，色の差異を識別するのはあまり得意ではありません．
-                また，人間は二つの画像を見比べて，色彩の構成が類似しているか否かを直感的に判断することが可能ですが，これもまたAIにとってみれば難しいタスクなのです．
-                我々は色構成をグラフ構造で表現し，機械学習手法を適用することで，色彩の分布や相対的な位置関係を考慮した色彩構成の類似度を算出する，新たな手法を開発しました．
-                この手法は，従来の手法では捉えきれなかった色彩構成の類似度をより精緻に評価することが可能となります．
-            </p>
-        </div>
-        <Fig src={"/fig/color-similarity.png"} caption={"色構成による画像検索の例"} />
-        <div class="research-body">
-            <h2 class="sub-title">主観のデータ化</h2>
-            <p>
-                これまでの画像分類は，画像に，車，イヌ，などのラベルをつけて，画像とラベルの関係を学習することで，分類を可能にしていました．
-                しかし，この方法ではその画像の持つ「雰囲気」やそのシーンがもつ「状況」などの，ラベルで表現することが難しい分類タスクに適用することはできません．
-                我々はこのような曖昧で直接ラベル付けが困難な画像分類を可能にする手法を研究しています．これにより従来にはない，新しい観点の画像検索や推薦が可能になります．
-            </p>
-        </div>
+    <div class="research-body">
+        <p>
+            「この2枚の写真，色づかいが似ている」「この画像はなんとなく落ち着いた雰囲気だ」——人は色や印象をこうして直感的に捉えますが，その感覚を数値として扱うのは簡単ではありません．私たちは，人の感じる<strong>色彩の類似性や画像の印象を定量化し，データとして扱えるようにする</strong>研究に取り組んでいます．
+        </p>
+    </div>
 
+    <div class="research-body">
+        <h2 class="sub-title">色彩の定量化</h2>
+        <p>
+            AIは形状や模様の特徴を把握するのは得意な反面，色の差異を識別するのはあまり得意ではありません．
+            また，人間は二つの画像を見比べて，色彩の構成が類似しているか否かを直感的に判断することが可能ですが，これもまたAIにとってみれば難しいタスクなのです．
+            我々は<strong>色構成をグラフ構造で表現し，機械学習手法を適用する</strong>ことで，色彩の分布や相対的な位置関係を考慮した色彩構成の類似度を算出する，新たな手法を開発しました．
+            この手法は，従来の手法では捉えきれなかった色彩構成の類似度をより精緻に評価することが可能となり，色づかいを手がかりとした画像検索やデザイン支援への応用が期待できます．
+        </p>
+    </div>
+    <Fig src={"/fig/color-similarity.png"} caption={"色構成による画像検索の例"} />
+
+    <div class="research-body">
+        <h2 class="sub-title">色を測り，色を操る</h2>
+        <p>
+            色彩を定量的に扱う技術は，色を「変換・補正」する応用にもつながります．私たちはこれまでに，基準となる画像の色分布に合わせて別の画像の色を変換する手法や，顔の肌色を自然に補正する手法など，<strong>人の見た目の自然さを保ったまま色を制御する</strong>研究を行ってきました．
+        </p>
+        <ul>
+            <li>Keiichiro Shirai, Tatsuya Baba, Shunsuke Ono, Masahiro Okuda, Yusuke Tatesumi, Paul Perrotin, "Guided Facial Skin Color Correction," <em>Signals</em>, Vol. 2, No. 3, pp. 540-558, 2021. <a href="https://doi.org/10.3390/signals2030033">DOI: 10.3390/signals2030033</a></li>
+            <li>Ryo Matsuoka, Keiichiro Shirai, Masahiro Okuda, "Reference-based Local Color Distribution Transformation Method and its Application to Image Integration," <em>Signal Processing: Image Communication</em>, Vol. 76, pp. 231-242, August 2019. <a href="https://doi.org/10.1016/j.image.2019.04.020">DOI: 10.1016/j.image.2019.04.020</a></li>
+        </ul>
+    </div>
+
+    <div class="research-body">
+        <h2 class="sub-title">主観のデータ化</h2>
+        <p>
+            これまでの画像分類は，画像に，車，イヌ，などのラベルをつけて，画像とラベルの関係を学習することで，分類を可能にしていました．
+            しかし，この方法ではその画像の持つ「雰囲気」やそのシーンがもつ「状況」などの，<strong>ラベルで表現することが難しい分類タスク</strong>に適用することはできません．
+            我々はこのような曖昧で直接ラベル付けが困難な画像分類を可能にする手法を研究しています．人の主観的な感じ方をデータとして学習に取り込むことで，従来にはない，新しい観点の画像検索や推薦が可能になります．
+        </p>
+    </div>
 </ResearchTopicLayout>
 <style>
     .title {
@@ -65,5 +82,36 @@ import ResearchTopicLayout from "../../layouts/ResearchTopicLayout.astro";
 
     .research-body p {
         text-indent: 1em;
+    }
+
+    .research-body ul {
+        padding-left: 1.2rem;
+        list-style-type: disc;
+        margin-block: 0.5rem 1.2rem;
+    }
+
+    .research-body li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+
+    a {
+        color: #000000;
+        text-decoration: underline;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+        color: #1d4ed8;
+        text-decoration-thickness: 0.12em;
+    }
+
+    a:visited {
+        color: #6d1d95;
     }
 </style>
